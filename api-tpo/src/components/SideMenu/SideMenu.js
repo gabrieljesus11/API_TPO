@@ -53,16 +53,13 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <React.Fragment key={"left"}>
-        <Button onClick={toggleDrawer("left", true)}>{"left"}
-        <IconButton
-            size="large"
-            edge="start"
-            color="white"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Button onClick={toggleDrawer("left", true)}>{
+            <MenuIcon 
+                size="large"
+                edge="start"
+                color="white"
+                aria-label="open drawer"/>
+        }
         </Button>
         <Drawer
           anchor={"left"}

@@ -7,7 +7,14 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import logo from '../../images/logo.png';
 import TemporaryDrawer from '../SideMenu/SideMenu';
-import createTheme from '@mui/material/styles/createTheme';
+import Avatar from '@mui/material/Avatar';
+import './Navbar.css'
+import PersonIcon from '@mui/icons-material/Person';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { IconButton, Typography } from '@mui/material';
+
+const settings = ['Iniciar Sesion', 'Registrarse'];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,21 +59,65 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar(){
+
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static">
-        <Toolbar>
-          <TemporaryDrawer/>
-            <img src={logo} alt= 'Education Hub Logo'/>
-          <Search style={{display: "flex", width: '10%', margin: 'auto 0'}} >
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+      <AppBar position="static" color="grey" display="flex" alignContent='center'>
+        <Toolbar style = {{justifyContent: 'space-between'}}>
+          <div className='menu-and-logo' >
+            <TemporaryDrawer className='top-element'/>
+            <img src={logo} alt= 'Education Hub Logo' className='top-element'/>
+          </div>
+          <div className='search-bar'>
+            <Search style={{display: "flex", width: '80%', margin: 'auto 0', backgroundColor: 'silver'}} >
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Buscar"
+                inputProps={{ 'aria-label': 'buscar' }}
+              />
+            </Search>
+          </div>
+          <div className='login-register-button'>
+            <IconButton onClick={handleOpenUserMenu}>
+              <Avatar alt='Mr Nobody' > 
+                <PersonIcon/> 
+              </Avatar>
+            </IconButton>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+                ))}
+                </Menu>
+          </div>
         </Toolbar>
       </AppBar>
     </Box>
