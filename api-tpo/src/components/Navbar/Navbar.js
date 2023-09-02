@@ -1,38 +1,74 @@
 import * as React from 'react';
-import './Navbar.css';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FolderIcon from '@mui/icons-material/Folder';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { styled, alpha } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import InputBase from '@mui/material/InputBase';
+import SearchIcon from '@mui/icons-material/Search';
+import logo from '../../images/logo.png';
+import TemporaryDrawer from '../SideMenu/SideMenu';
+import createTheme from '@mui/material/styles/createTheme';
 
-const Navbar = () => {
-    const [value, setValue] = React.useState('recents');
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
 
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
+
+export default function SearchAppBar(){
   return (
-    <BottomNavigation sx={{ width: 500 }} value={value} onChange={handleChange}>
-      <BottomNavigationAction
-        label="Recents"
-        value="recents"
-        icon={<RestoreIcon />}
-      />
-      <BottomNavigationAction
-        label="Favorites"
-        value="favorites"
-        icon={<FavoriteIcon />}
-      />
-      <BottomNavigationAction
-        label="Nearby"
-        value="nearby"
-        icon={<LocationOnIcon />}
-      />
-      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-    </BottomNavigation>
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar position="static">
+        <Toolbar>
+          <TemporaryDrawer/>
+            <img src={logo} alt= 'Education Hub Logo'/>
+          <Search style={{display: "flex", width: '10%', margin: 'auto 0'}} >
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
-    }
-    export default Navbar
+}
