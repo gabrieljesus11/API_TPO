@@ -7,10 +7,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import IconButton from '@mui/material/IconButton';
+import ClassIcon from '@mui/icons-material/Class';
+import PersonIcon from '@mui/icons-material/Person';
+import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
+import CallIcon from '@mui/icons-material/Call';
+
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -36,19 +38,42 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+      <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary="Inicio" />
             </ListItemButton>
           </ListItem>
-        ))}
-      </List>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText primary="Perfil" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ClassIcon />
+              </ListItemIcon>
+              <ListItemText primary="Cursos Disponibles" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <CallIcon />
+              </ListItemIcon>
+              <ListItemText primary="Contacto" />
+            </ListItemButton>
+          </ListItem>
+        </List>
     </Box>
   );
+
 
   return (
     <div>
