@@ -11,6 +11,7 @@ import { ListItemButton } from '@mui/material';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import PersonIcon from '@mui/icons-material/Person';
 import Chip from '@mui/material/Chip';
+import Rating from '@mui/material/Rating';
 
 export default function MediaCard() {
   return (
@@ -74,6 +75,7 @@ export default function MediaCard() {
           Comentarios
         </Typography>
       </ListItemButton>
+      <Rating name="read-only" value={5} readOnly />
       <Typography variant="body2" color="text.secondary">
           Romina
         </Typography>
