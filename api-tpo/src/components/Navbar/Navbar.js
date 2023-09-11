@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import logo from '../../images/logo.png';
+import logo from '../../img/logo.png';
 import TemporaryDrawer from '../SideMenu/SideMenu';
 import Avatar from '@mui/material/Avatar';
 import './Navbar.css'
@@ -13,8 +13,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { IconButton, Typography } from '@mui/material';
+import { Link } from "react-router-dom";
 
-const settings = ['Iniciar Sesion', 'Registrarse'];
+const settings = [<Link to={"/login"}>Ingresar</Link>];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',

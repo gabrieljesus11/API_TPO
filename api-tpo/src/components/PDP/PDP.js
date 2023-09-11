@@ -12,16 +12,14 @@ import EditNoteIcon from '@mui/icons-material/EditNote';
 import PersonIcon from '@mui/icons-material/Person';
 import Chip from '@mui/material/Chip';
 import Rating from '@mui/material/Rating';
+import { Link } from "react-router-dom";
+import foto from "../../img/cursoMKT.png";
 
 export default function MediaCard() {
   return (
     <Card sx={{ maxWidth: 500 }}>
-    <CardMedia
-        sx={{ height: 300 }}
-        image=".../images/cursoDiseno.png"
-        title="mkt"
-      />
         <CardContent>
+        <img src={foto} alt="foto" />
             <Typography gutterBottom variant="h5" component="div">
           Curso de Marketing
         </Typography>
@@ -36,7 +34,9 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="contained" color="secondary">Contratar</Button>
+        <Button variant="contained" color="secondary">
+        <Link to={"/contratar"}>Contratar</Link>
+        </Button>
       </CardActions>
       <CardContent>
       <ListItemButton>

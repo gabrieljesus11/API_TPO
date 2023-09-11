@@ -8,7 +8,6 @@ import Card from "../components/Cards/CardsHome/CardHome";
 export default function Home(){
     return <div>
     <NavBar />
-    <h1>Home</h1>
     <Banner />
     <h2>Lista de cursos</h2>
     <Card />
@@ -17,6 +16,4 @@ export default function Home(){
     <br/>
     <Card />
     </div>
-
-
 }

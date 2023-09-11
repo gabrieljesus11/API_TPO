@@ -16,47 +16,41 @@ export default function FormPropsTextFields() {
     >
 
     <Typography gutterBottom variant="h5" component="div">
-          Contratar servicio
+          Contacto
         </Typography>
 
-    <div>
+        <div>
         <TextField
           required
           id="outlined-required"
-          label="Nombre"
+          label="Nombre *"
           defaultValue=""
         />
 
         <TextField
           required
           id="outlined-required"
-          label="Apellido"
+          label="Apellido *"
           defaultValue=""
         />
 
         <TextField
           required
           id="outlined-required"
-          label="Correo electrónico"
+          label="Correo electrónico *"
           defaultValue=""
         />
 
         <TextField
           required
           id="outlined-required"
-          label="Teléfono"
-          defaultValue=""
-        />
-
-        <TextField
-          id="standard-helperText"
-          label="Horario de referencia"
+          label="Teléfono *"
           defaultValue=""
         />
 
         <TextField
           id="outlined-multiline-flexible"
-          label="Interés por el servicio"
+          label="Comentarios"
           multiline
           maxRows={4}
         />
@@ -64,7 +58,7 @@ export default function FormPropsTextFields() {
 
     </div>
 
-    <Button variant="contained" color="secondary">Contratar</Button>
+    <Button variant="contained" color="secondary">Enviar solicitud</Button>
 
     </Box>
   );

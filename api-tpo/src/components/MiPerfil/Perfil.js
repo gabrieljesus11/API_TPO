@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 export default function FormPropsTextFields() {
   return (
@@ -81,6 +82,8 @@ export default function FormPropsTextFields() {
 
 
     </div>
+
+    <Button variant="contained" color="secondary">Editar información</Button>
 
     </Box>
   );

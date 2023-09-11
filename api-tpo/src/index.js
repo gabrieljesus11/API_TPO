@@ -7,6 +7,9 @@ import MiPerfil from "./routes/MiPerfil";
 import CursosDisponibles from "./routes/CursosDisponibles";
 import Contacto from "./routes/Contacto";
 import Error from "./routes/Error";
+import PDP from "./routes/PDP";
+import Contratar from "./routes/Contratar";
+import Login from "./routes/Login";
 
 
 const router = createBrowserRouter([
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
   {
     path: "/contacto",
     element: <Contacto />,
+  },
+  {
+    path: "/pdp",
+    element: <PDP />,
+  },
+  {
+    path: "/contratar",
+    element: <Contratar />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 
 ]);
