@@ -12,6 +12,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import CallIcon from '@mui/icons-material/Call';
+import { Link } from "react-router-dom";
 
 
 export default function TemporaryDrawer() {
@@ -43,7 +44,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Inicio" />
+              <Link to={"/home"}>Inicio</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -51,7 +52,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              <ListItemText primary="Perfil" />
+              <Link to={"/miPerfil"}>Mi perfil</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -59,7 +60,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <ClassIcon />
               </ListItemIcon>
-              <ListItemText primary="Cursos Disponibles" />
+              <Link to={"/cursosDisponibles"}>Cursos Disponibles</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
@@ -67,7 +68,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <CallIcon />
               </ListItemIcon>
-              <ListItemText primary="Contacto" />
+              <Link to={"/contacto"}>Contacto</Link>
             </ListItemButton>
           </ListItem>
         </List>

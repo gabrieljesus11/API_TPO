@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
+import Link from '@mui/material/Link';
 
 export default function MediaCard() {
   return (
@@ -26,8 +27,10 @@ export default function MediaCard() {
         </Typography>
       </CardContent>
       <CardActions>
+      <Link to="pdp">
         <Button variant="outlined">Ver más</Button>
         <Button variant="contained" color="secondary">Contratar</Button>
+      </Link>
       </CardActions>
     </Card>
   );
