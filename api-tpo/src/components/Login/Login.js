@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 export default function FormPropsTextFields() {
   return (
@@ -44,7 +45,10 @@ export default function FormPropsTextFields() {
           ¿No sos miembro? Registrate acá
         </Typography>
         
-        <Button variant="contained" color="primary">Ingresar</Button>
+        <Button variant="outlined" color="primary">
+          <Link to={"/home"}>Volver</Link>
+        </Button>
+        <Button variant="contained" color="secondary">Ingresar</Button>
 
     </div>
 
