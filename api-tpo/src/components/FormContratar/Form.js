@@ -3,24 +3,25 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import './Form.css';
+import CardActions from '@mui/material/CardActions';
+import { Link } from "react-router-dom";
+
 
 export default function FormPropsTextFields() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '35ch'},
       }}
       noValidate
       autoComplete="off"
     >
 
-    <Typography gutterBottom variant="h5" component="div">
-          Contratar servicio
-        </Typography>
-
     <div>
         <TextField
+          className='form'
           required
           id="outlined-required"
           label="Nombre"
@@ -28,6 +29,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+          className='form'
           required
           id="outlined-required"
           label="Apellido"
@@ -35,6 +37,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+              className='form'
           required
           id="outlined-required"
           label="Correo electrónico"
@@ -42,6 +45,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+              className='form'
           required
           id="outlined-required"
           label="Teléfono"
@@ -49,12 +53,14 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+              className='form'
           id="standard-helperText"
           label="Horario de referencia"
           defaultValue=""
         />
 
         <TextField
+              className='form'
           id="outlined-multiline-flexible"
           label="Interés por el servicio"
           multiline
@@ -64,7 +70,13 @@ export default function FormPropsTextFields() {
 
     </div>
 
-    <Button variant="contained" color="secondary">Contratar</Button>
+    <CardActions>
+      
+    <div className="botonSecundario">
+      <Link to={"/pdp"} className="linkSecundario">Contratar</Link>
+    </div>
+
+    </CardActions>
 
     </Box>
   );

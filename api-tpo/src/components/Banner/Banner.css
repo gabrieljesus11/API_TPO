@@ -1,4 +1,8 @@
 .banner {
         position: relative;
-        padding: 40px;
+        height: 250px;
+        align-self: center;
+        align-items: center;
+        flex: auto;
+        justify-content: center;
 }

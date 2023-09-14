@@ -1,10 +1,10 @@
 import React from 'react'
 import imagen from "../../img/bannerCursoMobile.png";
-import banner from './Banner.css';
+import './Banner.css';
 
 function Banner() {
   return (
-    <div className={banner.Banner}>
+    <div className="banner">
         <img src={imagen} alt="banner" />
     </div>
   )

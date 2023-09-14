@@ -1,0 +1,48 @@
+.titulo{
+    font-size: 24px;
+    font-style: bold;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333;
+
+}
+
+.fecha{
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: #333;
+    padding: 4px 0px 8px 0px;
+}
+
+.chip{
+    padding: 0px 0px 4px 0px;
+}
+
+.precio{
+    font-size: 16px;
+    font-style: normal;
+    line-height: 20px;
+    color: #333;
+    padding: 4px 0px 4px 0px;
+}
+
+.botonPrincipal{
+    border-radius: 6px;
+    background: #7F6BB6;
+    display: flex;
+    width: 90px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkPrimario{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}

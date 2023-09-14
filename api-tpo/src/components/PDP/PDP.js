@@ -14,30 +14,42 @@ import Chip from '@mui/material/Chip';
 import Rating from '@mui/material/Rating';
 import { Link } from "react-router-dom";
 import foto from "../../img/cursoMKT.png";
+import './PDP.css';
 
 export default function MediaCard() {
   return (
     <Card sx={{ maxWidth: 500 }}>
-        <CardContent>
+
+      <div className='imagenPDP'>
         <img src={foto} alt="foto" />
-            <Typography gutterBottom variant="h5" component="div">
-          Curso de Marketing
-        </Typography>
-        </CardContent>
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Empieza el 09/10/2023
-        </Typography>
+      </div>
+
+        <CardContent>
+          <div className="titulo">
+           Curso de Marketing
+          </div>
+
+         <div className="fecha">
+            Empieza el 09/10/2023
+          </div>
+          <div className="chip">
         <Chip label="Duración 3 meses" color="primary" />
-        <Typography variant="body2" color="text.secondary">
-          $20.000
-        </Typography>
+      </div>
+
+      <div className="precio">
+        $20.000
+      </div>
       </CardContent>
+
       <CardActions>
-        <Button variant="contained" color="secondary">
-        <Link to={"/contratar"}>Contratar</Link>
-        </Button>
+      
+        <div className="botonPrincipal">
+          <Link to={"/contratar"} className="linkPrimario">Contratar</Link>
+        </div>
+
       </CardActions>
+ 
+
       <CardContent>
       <ListItemButton>
       <ListItemIcon>
