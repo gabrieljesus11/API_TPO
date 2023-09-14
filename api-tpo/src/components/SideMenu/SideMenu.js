@@ -6,7 +6,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import ClassIcon from '@mui/icons-material/Class';
 import PersonIcon from '@mui/icons-material/Person';
 import HomeIcon from '@mui/icons-material/Home';
@@ -44,7 +43,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <Link to={"/home"}>Inicio</Link>
+              <Link to={"/"}>Inicio</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>

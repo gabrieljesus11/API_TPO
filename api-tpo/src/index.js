@@ -14,7 +14,7 @@ import Login from "./routes/Login";
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
     errorElement: <Error />,
   },
