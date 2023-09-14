@@ -2,6 +2,91 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-items: center;
-    margin: 20px 0;
+    justify-items:flex-start;
+    position: relative;
+    margin: 0px 20px;
+}
+
+.label{
+    font-size: 10px;
+}
+
+.titulo{
+    font-size: 18px;
+    font-style: bold;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333;
+    padding: 8px 0px;
+}
+
+.fecha{
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: #333;
+    padding: 4px 0px 8px 0px;
+}
+
+.chip{
+    padding: 0px 0px 4px 0px;
+}
+
+.responsable{
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+    color: #333;
+    padding: 8px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.precio{
+    font-size: 16px;
+    font-style: normal;
+    line-height: 20px;
+    color: #333;
+    padding: 4px 0px 4px 0px;
+}
+
+.botonPrincipal{
+    border-radius: 6px;
+    background: #7F6BB6;
+    display: flex;
+    width: 100px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.botonSecundario{
+    border-radius: 6px;
+    border: 2px solid #7F6BB6;
+    background: #FFF;   
+    display: flex;
+    width: 100px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkPrimario{
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.linkSecundario{
+    color: #7F6BB6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
 }

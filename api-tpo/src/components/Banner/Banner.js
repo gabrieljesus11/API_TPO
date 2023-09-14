@@ -1,10 +1,11 @@
 import React from 'react'
-import banner from "../../img/bannerCursoMobile.png";
+import imagen from "../../img/bannerCursoMobile.png";
+import banner from './Banner.css';
 
 function Banner() {
   return (
-    <div>
-        <img src={banner} alt="banner" />
+    <div className={banner.Banner}>
+        <img src={imagen} alt="banner" />
     </div>
   )
 }
