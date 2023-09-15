@@ -72,8 +72,8 @@ export default function FormPropsTextFields() {
 
     <CardActions>
       
-    <div className="botonSecundario">
-      <Link to={"/pdp"} className="linkSecundario">Contratar</Link>
+    <div className="bSecundario">
+      <Link to={"/pdp"} className="blink">Contratar</Link>
     </div>
 
     </CardActions>

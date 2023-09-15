@@ -16,7 +16,7 @@ export default function MediaCard() {
     <Card sx={{ maxWidth: 350, display: 'grid' }}>
 
     <div className="card">
-    <div className="titulo">
+      <div className="titulo">
         Curso de Marketing
       </div>
 
@@ -37,7 +37,7 @@ export default function MediaCard() {
         $20.000
       </div>
 
-    </div>
+    
 
     
     <CardActions>
@@ -51,7 +51,7 @@ export default function MediaCard() {
     </div>
       
     </CardActions>
-
+    </div>
     </Card>
   );
 }

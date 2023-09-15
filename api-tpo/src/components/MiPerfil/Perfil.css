@@ -1,0 +1,25 @@
+.form{
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.bSecundario{
+    border-radius: 6px;
+    border: 2px solid #fff;
+    background: #7F6BB6;   
+    display: flex;
+    width: 250px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.blink{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}

@@ -18,7 +18,9 @@ import './PDP.css';
 
 export default function MediaCard() {
   return (
+    
     <Card sx={{ maxWidth: 500 }}>
+    <div className='cardPDP'>
 
       <div className='imagenPDP'>
         <img src={foto} alt="foto" />
@@ -95,6 +97,9 @@ export default function MediaCard() {
           Excelente el curso
         </Typography>
       </CardContent>
+
+      </div>
     </Card>
+    
   );
 }

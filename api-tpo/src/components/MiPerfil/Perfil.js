@@ -1,27 +1,26 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { Link } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import './Perfil.css';
 
 export default function FormPropsTextFields() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '35ch' },
       }}
       noValidate
       autoComplete="off"
     >
 
-    <Typography gutterBottom variant="h5" component="div">
-          Mi Perfil
-        </Typography>
-
     <div>
         <TextField
           required
+          className='form'
           id="outlined-required"
           label="Nombre"
           defaultValue="Agustina"
@@ -32,6 +31,7 @@ export default function FormPropsTextFields() {
 
         <TextField
           required
+          className='form'
           id="outlined-required"
           label="Apellido"
           defaultValue="Cafiero"
@@ -42,6 +42,7 @@ export default function FormPropsTextFields() {
 
         <TextField
           required
+          className='form'
           id="outlined-required"
           label="Correo electrónico"
           defaultValue="acafiero@gmail.com"
@@ -52,6 +53,7 @@ export default function FormPropsTextFields() {
 
         <TextField
           required
+          className='form'
           id="outlined-required"
           label="Teléfono"
           defaultValue="1145678909"
@@ -61,6 +63,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+          className='form'
           id="standard-helperText"
           label="Título"
           defaultValue="Ing. en Sistemas"
@@ -70,6 +73,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
+          className='form'
           id="outlined-multiline-flexible"
           label="Experiencia"
           defaultValue="Base de Datos, Java, Cobol"
@@ -83,7 +87,9 @@ export default function FormPropsTextFields() {
 
     </div>
 
-    <Button variant="contained" color="secondary">Editar información</Button>
+    <div className="bSecundario">
+      <Link to={"/"} className="blink">Editar información</Link>
+    </div>
 
     </Box>
   );

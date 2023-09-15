@@ -4,7 +4,9 @@ import Perfil from "../components/MiPerfil/Perfil";
 export default function MiPerfil(){
     return <div>
     <NavBar />
-    <h1>Mi Perfil</h1>
+    <div className="landing">
+    <div className="h2">Mi Perfil</div>
     <Perfil />
+    </div>
     </div>
 }
