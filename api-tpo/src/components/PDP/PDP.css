@@ -17,7 +17,7 @@
 
 .dias{
     color: #7F6BB6;
-    padding: 2px;
+    padding: 8px 0px;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -38,7 +38,7 @@
 }
 
 .chip{
-    padding: 0px 0px 4px 0px;
+    padding: 4px 0px;
 }
 
 .precio{
@@ -46,7 +46,7 @@
     font-style: normal;
     line-height: 20px;
     color: #333;
-    padding: 4px 0px 4px 0px;
+    padding: 8px 0px;
 }
 
 .botonPrincipal{
@@ -67,4 +67,42 @@
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
+}
+
+.comentario{
+    background-color: #FFF;
+    padding: 8px;
+    margin: 12px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.tituloComentario{
+    color:#333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.descripcionComentario{
+    color: #333;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.icono{
+    color: #1A77BA;
+}
+
+.subtitulo{
+    color:#333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
 }

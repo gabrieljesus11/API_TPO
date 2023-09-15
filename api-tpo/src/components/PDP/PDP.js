@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ReviewsIcon from '@mui/icons-material/Reviews';
-import { ListItemButton } from '@mui/material';
+import { ListItem, ListItemButton, colors } from '@mui/material';
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import PersonIcon from '@mui/icons-material/Person';
 import Chip from '@mui/material/Chip';
@@ -59,49 +59,76 @@ export default function MediaCard() {
  
 
       <CardContent>
+
       <ListItemButton>
       <ListItemIcon>
-            <PersonIcon />
+          <div className='icono'>
+          <PersonIcon />
+          </div>
         </ListItemIcon>
-        <Typography variant="body2" color="text.secondary">
-          Responsable: Lucia Vazquez
-        </Typography>
+        <div className='subtitulo'>
+        Responsable: Lucia Vazquez
+        </div>
       </ListItemButton>
+
+
         <Typography variant="body2" color="text.secondary">
-          Titulo Universitario Administración de Empresas
-          Cursos de Negocios
-          Posgrado Marketing
+        <ListItem>Titulo Universitario: Administración de Empresas</ListItem>
+        <ListItem>Cursos de Negocios</ListItem>
+        <ListItem>Posgrado Marketing</ListItem>
         </Typography>
       </CardContent>
       <CardContent>
+
       <ListItemButton>
       <ListItemIcon>
-            <EditNoteIcon />
+          <div className='icono'>
+          <EditNoteIcon />
+          </div>
         </ListItemIcon>
-      <Typography variant="body2" color="text.secondary">
-          Descripción del curso
-        </Typography>
+        <div className='subtitulo'>
+        Descripción del curso
+        </div>
       </ListItemButton>
+
+
         <Typography variant="body2" color="text.secondary">
         Lorem ipsum dolor sit amet consectetur. Lobortis eget augue sed et. Suspendisse tempus tristique consequat sed imperdiet aliquet condimentum etiam diam.
         </Typography>
       </CardContent>
       <CardContent>
+
       <ListItemButton>
       <ListItemIcon>
-            <ReviewsIcon />
+          <div className='icono'>
+          <ReviewsIcon />
+          </div>
         </ListItemIcon>
-      <Typography variant="body2" color="text.secondary">
+        <div className='subtitulo'>
           Comentarios
-        </Typography>
+        </div>
       </ListItemButton>
+
+      <div className='comentario'>
       <Rating name="read-only" value={5} readOnly />
-      <Typography variant="body2" color="text.secondary">
-          Romina
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Excelente el curso
-        </Typography>
+      <div className='tituloComentario'>
+        Romina
+      </div>
+        <div className='descripcionComentario'>
+        Excelente el curso
+        </div>
+      </div>
+      
+        <div className='comentario'>
+        <Rating name="read-only" value={5} readOnly />
+        <div className='tituloComentario'>
+        Karina
+        </div>
+        <div className='descripcionComentario'>
+        Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.
+        </div>
+        </div>
+        
       </CardContent>
 
       </div>
