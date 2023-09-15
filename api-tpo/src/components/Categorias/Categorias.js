@@ -9,7 +9,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import BrushIcon from '@mui/icons-material/Brush';
 import Divider from '@mui/material/Divider';
 import './Categorias.css';
-import { deepPurple } from '@mui/material/colors';
+
 
 export default function InsetDividers() {
   return (

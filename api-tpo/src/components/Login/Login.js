@@ -3,23 +3,20 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
+import './Login.css'
+import { CardContent } from '@mui/material';
 
 export default function FormPropsTextFields() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '45ch' },
       }}
       noValidate
       autoComplete="off"
     >
-
-    <Typography gutterBottom variant="h5" component="div">
-          Ingresar
-        </Typography>
 
 
     <div>
@@ -37,18 +34,34 @@ export default function FormPropsTextFields() {
           defaultValue=""
         />
 
-        <Typography variant="caption" display="block" gutterBottom>
-          Olvidé mi contraseña
-        </Typography>
-
-        <Typography variant="body2" color="text.secondary">
-          ¿No sos miembro? Registrate acá
-        </Typography>
         
-        <Button variant="outlined" color="primary">
-          <Link to={"/home"}>Volver</Link>
-        </Button>
-        <Button variant="contained" color="secondary">Ingresar</Button>
+        <div className='olvideContrasena'>
+          Olvidé mi contraseña
+        </div>
+
+<CardActions>
+<div className='registro'>
+          ¿No sos miembro?
+        </div>
+        <div className='registro2'>
+          Registrate acá
+        </div>
+</CardActions>
+
+
+
+        <CardActions>
+
+    <div className="botonSecundario">
+      <Link to={"/"} className="linkSecundario">Volver</Link>
+    </div>
+
+    <div className="botonPrincipal">
+      <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
+    </div>
+      
+    </CardActions>
+
 
     </div>
 
