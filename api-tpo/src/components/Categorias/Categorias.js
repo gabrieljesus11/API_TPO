@@ -31,7 +31,7 @@ export default function InsetDividers() {
       <Divider variant="inset" component="li" />
       <ListItem>
         <ListItemAvatar>
-          <Avatar className='avatar'>
+          <Avatar>
             <ComputerIcon />
           </Avatar>
         </ListItemAvatar>

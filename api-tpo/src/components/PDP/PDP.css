@@ -2,13 +2,31 @@
     background-color: #F8F8FB;
 }
 
+.imagenPDP{
+    padding: 0px 0px 12px 0px;
+    max-width: 360px;
+}
+
 .titulo{
     font-size: 24px;
     font-style: bold;
     font-weight: 500;
     line-height: 20px;
     color: #333;
+}
 
+.dias{
+    color: #7F6BB6;
+    padding: 2px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.modulo{
+    background-color: #fff;
+    padding: 0px 0px 8px 0px;
 }
 
 .fecha{

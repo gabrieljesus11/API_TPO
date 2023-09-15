@@ -21,7 +21,7 @@ export default function FormPropsTextFields() {
         className='form'
           required
           id="outlined-required"
-          label="Nombre *"
+          label="Nombre"
           defaultValue=""
         />
 
@@ -29,7 +29,7 @@ export default function FormPropsTextFields() {
         className='form'
           required
           id="outlined-required"
-          label="Apellido *"
+          label="Apellido"
           defaultValue=""
         />
 
@@ -37,7 +37,7 @@ export default function FormPropsTextFields() {
         className='form'
           required
           id="outlined-required"
-          label="Correo electrónico *"
+          label="Correo electrónico"
           defaultValue=""
         />
 
@@ -45,7 +45,7 @@ export default function FormPropsTextFields() {
         className='form'
           required
           id="outlined-required"
-          label="Teléfono *"
+          label="Teléfono"
           defaultValue=""
         />
 

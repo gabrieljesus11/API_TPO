@@ -24,6 +24,8 @@ export default function MediaCard() {
         <img src={foto} alt="foto" />
       </div>
 
+      <div className='modulo'>
+
         <CardContent>
           <div className="titulo">
            Curso de Marketing
@@ -34,6 +36,10 @@ export default function MediaCard() {
           </div>
           <div className="chip">
         <Chip label="Duración 3 meses" color="primary" />
+      </div>
+
+      <div className="dias">
+        Lunes y Miercoles 20hs.
       </div>
 
       <div className="precio">
@@ -48,6 +54,8 @@ export default function MediaCard() {
         </div>
 
       </CardActions>
+
+      </div>
  
 
       <CardContent>
