@@ -10,6 +10,7 @@ import Error from "./routes/Error";
 import PDP from "./routes/PDP";
 import Contratar from "./routes/Contratar";
 import Login from "./routes/Login";
+import Filtros from "./routes/Filtros";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/filtro",
+    element: <Filtros />,
   },
 
 ]);

@@ -43,7 +43,7 @@ export default function MediaCard() {
     </div>
 
     <div className="botonPrincipal">
-      <Link to={"/contratar"} className="linkPrimario">Contratar</Link>
+      <Link to={"/contratar"} className="linkPrimario" underline="none">Contratar</Link>
     </div>
       
     </CardActions>
