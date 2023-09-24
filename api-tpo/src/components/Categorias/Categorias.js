@@ -13,13 +13,24 @@ import './Categorias.css';
 
 export default function InsetDividers() {
   return (
+
+    <section className="md-mb-4">
+    <div className="h2">Categorías</div>
+        
     <List
       sx={{
+        flexGrow: 1 ,
+        display: "flex",
+        alignContent: "center" ,
+        position: "static" ,
         width: '100%',
         maxWidth: 360,
         bgcolor: 'background.paper',
       }}
+      
     >
+
+    
       <ListItem>
         <ListItemAvatar>
           <Avatar className='avatar'>
@@ -47,5 +58,8 @@ export default function InsetDividers() {
         <ListItemText primary="Cursos Diseño" />
       </ListItem>
     </List>
+    </section>
+
+    
   );
 }

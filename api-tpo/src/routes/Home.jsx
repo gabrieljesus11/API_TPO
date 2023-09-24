@@ -8,16 +8,26 @@ import Categorias from "../components/Categorias/Categorias";
 
 export default function Home(){
     return <div>
+    <section>
     <NavBar />
-    <div className="landing">
+    </section>
+
+    <section className="grid gap-4">
     <Banner />
-    <div className="h2">Categorías</div>
+    </section>
+
+    <section className="grid gap-4 md:grid-cols-4">
     <Categorias />
+    </section>
+
+    <section
+    className="grid gap-4 md:grid-cols-4"
+    > 
     <Card />
-    <br/>
     <Card />
-    <br/>
     <Card />
-    </div>
+    </section>
+
+    
     </div>
 }

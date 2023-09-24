@@ -8,7 +8,10 @@ export default function Login(){
     <NavBar />
     <div className="landing">
     <div className="h2">Ingresar</div>
-        <ModuloLogin />
+    <section className="grid gap-4 md:grid-cols-8">
+    <ModuloLogin />
+    </section>
+
     </div>
         
     </div>

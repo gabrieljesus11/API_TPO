@@ -6,7 +6,9 @@ export default function MiPerfil(){
     <NavBar />
     <div className="landing">
     <div className="h2">Mi Perfil</div>
+    <section className="grid gap-4 xl:grid-cols-8">
     <Perfil />
+    </section>
     </div>
     </div>
 }

@@ -6,7 +6,10 @@ export default function Contratar(){
     <NavBar />
     <div className="landing">
     <div className="h2">Contratar servicio</div>
+    
+    <section className="grid gap-4 xl:grid-cols-8">
     <FormContratar />
+    </section>
     </div>
     </div>
 

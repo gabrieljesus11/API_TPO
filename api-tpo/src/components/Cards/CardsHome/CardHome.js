@@ -9,45 +9,53 @@ import './CardHome.css';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ maxWidth: 350, display: 'grid' }}>
 
-    <div className="card">
-      <div className="titulo">
-        Curso de Marketing
-      </div>
+    <section>
+    
+    <Card sx={{ maxWidth: 500, display: 'grid' }}>
 
-      <div className="fecha">
-        Empieza el 09/10/2023
-      </div>
+<div className="card">
+  <div className="titulo">
+    Curso de Marketing
+  </div>
 
-      <div className="chip">
-        <Chip label="Duración 3 meses" color="primary" />
-      </div>
+  <div className="fecha">
+    Empieza el 09/10/2023
+  </div>
 
-      <div className="responsable">
-        <PersonIcon />
-        Responsable: Lucia Vazquez
-      </div>
+  <div className="chip">
+    <Chip label="Duración 3 meses" color="primary" />
+  </div>
 
-      <div className="precio">
-        $20.000
-      </div>
+  <div className="responsable">
+    <PersonIcon />
+    Responsable: Lucia Vazquez
+  </div>
+
+  <div className="precio">
+    $20.000
+  </div>
+
+
+
+
+<CardActions>
+
+<div className="botonSecundario">
+  <Link to={"/pdp"} className="linkSecundario">Ver más</Link>
+</div>
+
+<div className="botonPrincipal">
+  <Link to={"/contratar"} className="linkPrimario" underline="none">Contratar</Link>
+</div>
+  
+</CardActions>
+</div>
+</Card>
+
+    </section>
+
 
     
-
-    
-    <CardActions>
-
-    <div className="botonSecundario">
-      <Link to={"/pdp"} className="linkSecundario">Ver más</Link>
-    </div>
-
-    <div className="botonPrincipal">
-      <Link to={"/contratar"} className="linkPrimario" underline="none">Contratar</Link>
-    </div>
-      
-    </CardActions>
-    </div>
-    </Card>
   );
 }
