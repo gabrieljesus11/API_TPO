@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
@@ -11,6 +11,9 @@ import PDP from "./routes/PDP";
 import Contratar from "./routes/Contratar";
 import Login from "./routes/Login";
 import Filtros from "./routes/Filtros";
+//import Registro from "./routes/Registro";
+import { AuthProvider } from './auth/AuthProvider';
+import App from './App';
 
 
 const router = createBrowserRouter([
@@ -20,9 +23,14 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: "/miPerfil",
+    path: "/",
     element: <MiPerfil />,
-    errorElement: <Error />,
+    children: [
+      {
+        path: "/miPerfil",
+        element: <MiPerfil />,
+      },
+    ],
   },
   {
     path: "/cursosDisponibles",
@@ -49,11 +57,19 @@ const router = createBrowserRouter([
     element: <Filtros />,
   },
 
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
+
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+
     <RouterProvider router={router} />
   </React.StrictMode>
 );
