@@ -1,17 +1,79 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./routes/Home";
+import MiPerfil from "./routes/MiPerfil";
+import CursosDisponibles from "./routes/CursosDisponibles";
+import Contacto from "./routes/Contacto";
+import Error from "./routes/Error";
+import PDP from "./routes/PDP";
+import Contratar from "./routes/Contratar";
+import Login from "./routes/Login";
+import Filtros from "./routes/Filtros";
+import Registro from "./routes/Registro";
+import { AuthProvider } from './auth/AuthProvider';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/",
+    element: <MiPerfil />,
+    children: [
+      {
+        path: "/miPerfil",
+        element: <MiPerfil />,
+      },
+    ],
+  },
+  {
+    path: "/cursosDisponibles",
+    element: <CursosDisponibles />,
+  },
+  {
+    path: "/contacto",
+    element: <Contacto />,
+  },
+  {
+    path: "/pdp",
+    element: <PDP />,
+  },
+  {
+    path: "/contratar",
+    element: <Contratar />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/filtro",
+    element: <Filtros />,
+  },
+
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
+  {
+    path: "/registro",
+    element: <Registro />,
+  },
+
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
