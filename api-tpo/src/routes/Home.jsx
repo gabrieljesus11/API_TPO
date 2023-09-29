@@ -7,12 +7,12 @@ import Categorias from "../components/Categorias/Categorias";
 
 
 export default function Home(){
-    return <div>
+    return <div className="flex-wrap place-items-center">
     <section>
     <NavBar />
     </section>
 
-    <section className="grid gap-4">
+    <section className="">
     <Banner />
     </section>
 
@@ -21,8 +21,7 @@ export default function Home(){
     </section>
 
     <section
-    className="grid gap-4 md:grid-cols-4"
-    > 
+    className="grid gap-4 md:grid-cols-4"> 
     <Card />
     <Card />
     <Card />

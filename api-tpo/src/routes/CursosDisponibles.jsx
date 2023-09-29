@@ -12,19 +12,21 @@ export default function CursosDisponibles(){
     <div className="landing">
    
 
-    <Stack direction="row" spacing={2}>
-    <div className="h2">Lista completa de cursos</div>
-    <Button startIcon={<FilterListIcon />}>
-    <Link to={"/filtro"}>Filtrar</Link>
-      </Button>
-
+    <Stack direction="row flex-wrap content-between" spacing={2}>
+      <div className="h2">Lista completa de cursos</div>
+        <Button startIcon={<FilterListIcon />}>
+          <Link to={"/filtro"}>Filtrar</Link>
+        </Button>
     </Stack>
 
+    <section
+    className="grid gap-4 md:grid-cols-4"
+    > 
     <Card />
-    <br/>
     <Card />
-    <br/>
     <Card />
+    </section>
+
     </div>
     </div>
 }

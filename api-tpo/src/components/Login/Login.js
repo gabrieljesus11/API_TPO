@@ -44,7 +44,7 @@ export default function FormPropsTextFields() {
           ¿No sos miembro?
         </div>
         <div className='registro2'>
-          Registrate acá
+          <Link to={"/Registro"} className="registro2">Registrate acá</Link>
         </div>
 </CardActions>
 

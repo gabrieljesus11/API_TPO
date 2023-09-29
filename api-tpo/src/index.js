@@ -11,7 +11,7 @@ import PDP from "./routes/PDP";
 import Contratar from "./routes/Contratar";
 import Login from "./routes/Login";
 import Filtros from "./routes/Filtros";
-//import Registro from "./routes/Registro";
+import Registro from "./routes/Registro";
 import { AuthProvider } from './auth/AuthProvider';
 import App from './App';
 
@@ -62,6 +62,10 @@ const router = createBrowserRouter([
     element: <Login />,
   },
 
+  {
+    path: "/registro",
+    element: <Registro />,
+  },
 
 
 ]);
