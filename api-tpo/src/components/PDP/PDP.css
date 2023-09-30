@@ -106,3 +106,14 @@
     font-weight: 400;
     line-height: 20px; /* 125% */
 }
+
+.formComentario{
+    padding: 12px 0px;
+    flex-wrap: wrap;
+    text-wrap: balance;
+    content: balance;
+}
+
+.rating{
+    margin: 12px 0px;
+}
