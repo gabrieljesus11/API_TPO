@@ -1,4 +1,6 @@
 .search-bar{
-    padding: 6px;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
     background-color: #fff;
 }

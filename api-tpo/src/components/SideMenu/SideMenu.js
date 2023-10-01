@@ -81,6 +81,18 @@ export default function TemporaryDrawer() {
   
 
   const list = (anchor) => (
+    <section>
+    <div className='search-bar'>
+      <Search style={{display: "flex", width: '90%', margin: 'auto 0', backgroundColor: '#eee'}} >
+      <SearchIconWrapper>
+        <SearchIcon />
+      </SearchIconWrapper>
+      <StyledInputBase
+        placeholder="Buscar"
+        inputProps={{ 'aria-label': 'buscar' }}
+      />
+      </Search>
+    </div>
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
@@ -88,63 +100,51 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
 
-
       <List>
 
-      <div className='search-bar'>
-            <Search style={{display: "flex", width: '90%', margin: 'auto 0', backgroundColor: '#eee'}} >
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Buscar"
-                inputProps={{ 'aria-label': 'buscar' }}
-              />
-            </Search>
-          </div>
-
       <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton to={"../"}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <Link to={"/"}>Inicio</Link>
+              Inicio
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton to={"/miPerfil"}>
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              <Link to={"/miPerfil"}>Mi perfil</Link>
+              Mi perfil
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton to={"/abmcomentarios"}>
               <ListItemIcon>
                 <RateReviewIcon />
               </ListItemIcon>
-              <Link to={"/abmcomentarios"}>Comentarios</Link>
+              Comentarios
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton to={"/cursosDisponibles"}>
               <ListItemIcon>
                 <ClassIcon />
               </ListItemIcon>
-              <Link to={"/cursosDisponibles"}>Cursos Disponibles</Link>
+              Cursos Disponibles
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton to={"/contacto"}>
               <ListItemIcon>
                 <CallIcon />
               </ListItemIcon>
-              <Link to={"/contacto"}>Contacto</Link>
+              Contacto
             </ListItemButton>
           </ListItem>
         </List>
     </Box>
+  </section>
   );
 
 
