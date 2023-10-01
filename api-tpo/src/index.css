@@ -14,8 +14,9 @@ body {
 
 .landing{
   margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
-
 
 .h2{
   color: #505765;
@@ -24,4 +25,21 @@ body {
   font-weight: 600;
   line-height: normal;
   padding: 20px 0px;
+}
+
+#contacto-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%
+}
+
+.contacto-element{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 50%;
 }

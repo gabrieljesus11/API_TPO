@@ -5,10 +5,16 @@ export default function Contacto(){
     return <div>
     <NavBar />
     <div className="landing">
-    <div className="h2">Contacto</div>
     
-    <section className="grid gap-4 xl:grid-cols-8">
-    <FormContacto />
+    <section id="contacto-container">
+        <div className="h2 contacto-element">
+            <h2>Contacto</h2>
+            <p>¡Queremos escucharte! <br /> Envíanos un mensaje</p>
+        </div>
+    
+        < div className="contacto-element">
+            <FormContacto />
+        </div>
     </section>
     </div>
     </div>
