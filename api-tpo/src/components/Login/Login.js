@@ -9,7 +9,8 @@ import { CardContent } from '@mui/material';
 
 export default function FormPropsTextFields() {
   return (
-    <Box
+    <Box 
+      className="login-container"
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '45ch' },
@@ -21,9 +22,9 @@ export default function FormPropsTextFields() {
 
 
 
-    <div>
+    <div >
 
-    <div className="grid gap-4 xl:grid-cols-8">
+    <div id="login-container">
         <TextField
           required
           id="outlined-required"
@@ -46,7 +47,7 @@ export default function FormPropsTextFields() {
 
 <CardActions>
 <div className='registro'>
-          ¿No sos miembro?
+          ¿No eres miembro?
         </div>
         <div className='registro2'>
           <Link to={"/Registro"} className="registro2">Registrate acá</Link>
@@ -56,15 +57,15 @@ export default function FormPropsTextFields() {
 
 
     <CardActions>
-      <div id="botones-login">
-        <div className="botonSecundario">
-          <Link to={"/"} className="linkSecundario">Volver</Link>
-        </div>
 
-        <div className="botonPrincipal">
-          <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
-        </div>
+      <div className="botonSecundario">
+        <Link to={"/"} className="linkSecundario">Volver</Link>
       </div>
+
+      <div className="botonPrincipal">
+        <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
+      </div>
+      
     </CardActions>
 
 

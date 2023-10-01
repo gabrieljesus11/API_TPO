@@ -1,8 +1,15 @@
 .banner {
-        position: relative;
-        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        height: 10%;
+        width: 100%;
         align-self: center;
         align-items: center;
         flex: auto;
         justify-content: center;
+}
+
+.banner img{
+        height: auto;
+		width:100%;
 }
