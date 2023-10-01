@@ -19,7 +19,11 @@ export default function FormPropsTextFields() {
     >
 
 
+
+
     <div>
+
+    <div className="grid gap-4 xl:grid-cols-8">
         <TextField
           required
           id="outlined-required"
@@ -34,10 +38,11 @@ export default function FormPropsTextFields() {
           defaultValue=""
         />
 
-        
         <div className='olvideContrasena'>
           Olvidé mi contraseña
         </div>
+      </div>
+        
 
 <CardActions>
 <div className='registro'>
@@ -50,15 +55,15 @@ export default function FormPropsTextFields() {
 
 
 
-        <CardActions>
+    <CardActions>
 
-    <div className="botonSecundario">
-      <Link to={"/"} className="linkSecundario">Volver</Link>
-    </div>
+      <div className="botonSecundario">
+        <Link to={"/"} className="linkSecundario">Volver</Link>
+      </div>
 
-    <div className="botonPrincipal">
-      <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
-    </div>
+      <div className="botonPrincipal">
+        <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
+      </div>
       
     </CardActions>
 

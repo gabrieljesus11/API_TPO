@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import RateReviewIcon from '@mui/icons-material/RateReview';
 import './SideMenu.css';
 
 
@@ -116,6 +117,14 @@ export default function TemporaryDrawer() {
                 <PersonIcon />
               </ListItemIcon>
               <Link to={"/miPerfil"}>Mi perfil</Link>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <RateReviewIcon />
+              </ListItemIcon>
+              <Link to={"/abmcomentarios"}>Comentarios</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
