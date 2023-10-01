@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
+import Divider from '@mui/material/Divider';
 
 export default function FormPropsTextFields() {
   return (
@@ -11,12 +12,16 @@ export default function FormPropsTextFields() {
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '35ch' },
+        'display':'flex',
+        'justifyContent': 'center',
+        'flexDirection': 'column',
+        'alignItems':'center',
       }}
       noValidate
       autoComplete="off"
     >
 
-        <div>
+    <div>
         <TextField
         className='form'
           required
@@ -56,8 +61,6 @@ export default function FormPropsTextFields() {
           multiline
           maxRows={4}
         />
-
-
     </div>
 
     <div className="bSecundario">
