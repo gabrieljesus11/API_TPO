@@ -174,28 +174,34 @@ export default function MediaCard() {
           <Typography id="modal-modal-description" sx={{ mt: 2}}>
             Completá tus datos y dejanos tu comentario sobre este curso.
           </Typography>
+
+          <div className='contenedor'>
           
-          <TextField
-          className='formComentario'
-          required
-          id="outlined-required"
-          label="Nombre"
-          defaultValue=""
-        />
-          <TextField
-          className='formComentario'
-          required
-          id="outlined-required"
-          label="Mail"
-          defaultValue=""
-        />
-        <TextField
-        className='formComentario'
-          id="outlined-required"
-          label="Comentario"
-          defaultValue=""
-          multiline
-        />
+              <TextField
+              className='formComentario'
+              required
+              id="outlined-required"
+              label="Nombre"
+              defaultValue=""
+            />
+              <TextField
+              className='formComentario'
+              required
+              id="outlined-required"
+              label="Mail"
+              defaultValue=""
+            />
+            <TextField
+            className='formComentario'
+              id="outlined-required"
+              label="Comentario"
+              defaultValue=""
+              multiline
+            />
+    
+          </div>
+
+
         <div className="rating">
       <Typography component="legend">Puntuación del curso</Typography>
       <Rating
@@ -207,10 +213,20 @@ export default function MediaCard() {
       />
       </div>
 
+      <div className="botones">
+
+      <div className="botonSecundario">
+          <div className="linkSecundario" onClick={handleClose}>
+          Volver
+          </div>
+        </div>
+
       <div className="botonPrincipal">
           <div className="linkPrimario" onClick={handleClose}>
           Enviar
           </div>
+        </div>
+
         </div>
 
         </Box>

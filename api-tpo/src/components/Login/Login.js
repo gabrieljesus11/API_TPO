@@ -23,7 +23,7 @@ export default function FormPropsTextFields() {
 
     <div>
 
-    <div className="grid gap-4 xl:grid-cols-8">
+    <div className="contenedorLogin">
         <TextField
           required
           id="outlined-required"
