@@ -56,15 +56,15 @@ export default function FormPropsTextFields() {
 
 
     <CardActions>
+      <div id="botones-login">
+        <div className="botonSecundario">
+          <Link to={"/"} className="linkSecundario">Volver</Link>
+        </div>
 
-      <div className="botonSecundario">
-        <Link to={"/"} className="linkSecundario">Volver</Link>
+        <div className="botonPrincipal">
+          <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
+        </div>
       </div>
-
-      <div className="botonPrincipal">
-        <Link to={"/miPerfil"} className="linkPrimario">Ingresar</Link>
-      </div>
-      
     </CardActions>
 
 
