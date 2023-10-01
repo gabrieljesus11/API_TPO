@@ -61,6 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     left: false,
@@ -115,7 +116,7 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              Mi perfil
+              {}<Link to={"/miPerfil"}>Mi perfil</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
