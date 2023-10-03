@@ -1,0 +1,15 @@
+{
+    "database": [
+        {"usuario":"usuario@mail.com",
+        "password":"password"},
+        {"usuario":"agus@mail.com",
+        "password":"agus"},
+        {"usuario":"gabi@mail.com",
+        "password":"gabi"}
+    ],
+
+    "errors": {
+        "username": "Correo invalido.",
+        "password": "Contraseña incorrecta."
+    }
+}
