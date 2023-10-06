@@ -12,6 +12,7 @@ import Contratar from "./routes/Contratar";
 import Login from "./routes/Login";
 import Filtros from "./routes/Filtros";
 import Registro from "./routes/Registro";
+import Recupero from "./routes/Recupero";
 import ABMcomentarios from "./routes/ABMcomentarios";
 import { AuthProvider } from './auth/AuthProvider';
 import App from './App';
@@ -73,6 +74,12 @@ const router = createBrowserRouter([
     path: "/abmcomentarios",
     element: <ABMcomentarios />,
   },
+
+  {
+    path: "/recuperoContrasena",
+    element: <Recupero />,
+  },
+
 
 
 ]);
