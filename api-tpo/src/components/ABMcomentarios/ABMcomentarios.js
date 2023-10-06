@@ -13,12 +13,19 @@ import Chip from '@mui/material/Chip';
 import { useState } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import {UserContext} from '../UserProvider/UserProvider'
+import {useContext } from 'react';
 
 export default function AlignItemsList() {
+  const UserProvider = useContext(UserContext)
   const [showCard, setShowCard] = useState(true)
   const [blockCard, setBlockCard] = useState(true)
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
+
+  const foo = ()=>{
+    UserProvider.user == true
+  }
   
   const handleAceptar = (event)=>{
     event.preventDefault();
@@ -48,6 +55,7 @@ export default function AlignItemsList() {
   };
   return (
     <div>
+      {foo}
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <div className="chip">
         <Chip label="Curso Marketing" color="primary" />

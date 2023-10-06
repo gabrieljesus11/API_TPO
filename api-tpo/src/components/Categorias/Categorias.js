@@ -9,9 +9,12 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import BrushIcon from '@mui/icons-material/Brush';
 import Divider from '@mui/material/Divider';
 import './Categorias.css';
+import {UserContext} from '../UserProvider/UserProvider'
+import {useContext } from 'react';
 
 
 export default function InsetDividers() {
+  const UserProvider = useContext(UserContext);
   return (
 
     <section style={{margin: '2rem'}}>

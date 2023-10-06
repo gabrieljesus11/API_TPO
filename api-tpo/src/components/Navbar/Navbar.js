@@ -22,6 +22,7 @@ export default function NavBar(){
 
   const handleLogOut = ()=>{
     userProvider.setUser(null);
+    setUserIsLogged(false)
     console.log(userProvider.user)
     console.log(userIsLogged)
   }
@@ -43,7 +44,7 @@ export default function NavBar(){
   };
 
   const handleAvatarIcon = () =>{
-    return userProvider.user != null ? <EmoticonIcon/> : <PersonIcon/>
+    return userProvider.user.imageSource != null ? userProvider.user.imageSource : ''
   }
 
   return (
@@ -57,9 +58,14 @@ export default function NavBar(){
           
             
             <div className='login-register-button'>
-              <IconButton onClick={handleOpenUserMenu}>
-              <Avatar alt='Usuario' > 
-                  {handleAvatarIcon}
+              <IconButton onClick={handleOpenUserMenu}sx={{display: userIsLogged ? 'none' : 'default'}}>
+              <Avatar alt='Usuario'  > 
+                <PersonIcon/>
+              </Avatar>
+              </IconButton>              
+              <IconButton onClick={handleOpenUserMenu} sx={{display: userIsLogged ? 'default' : 'none'}}>
+              <Avatar alt='Usuario' imgProps={{}} > 
+                <img src={handleAvatarIcon}/>
               </Avatar>
               </IconButton>
               <Menu
