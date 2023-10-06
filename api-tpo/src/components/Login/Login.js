@@ -74,7 +74,7 @@ const renderForm = (
       {renderErrorMessage(errorMessages.name)}
 
       <div className='olvideContrasena'>
-        Olvidé mi contraseña
+        <Link to={"/recuperoContrasena"} className='recupero'>Olvidé mi contraseña</Link>
       </div>
     </div>
 
@@ -87,16 +87,22 @@ const renderForm = (
     </div>
     </CardActions>
 
-    <CardActions id='botones-login'>
-    <div className="botonSecundario">
-      <Link to={"/"} className="linkSecundario">Volver</Link>
+ 
+    <div className='botonesLogin'>
+      <div className="bPrincipalLog">
+        <Link className="linkPrimario" onClick={handleSubmit}>Ingresar</Link>
+      </div>
+      <div className="bSecundarioLog">
+        <Link to={"/"} className="linkSecundario">Volver</Link>
+      </div>
     </div>
-    <div className="botonPrincipal">
-      <Link className="linkPrimario" onClick={handleSubmit}>Ingresar</Link>
-    </div>
-    </CardActions>
+
+
+    
   </div>
+
 );
+
 
 return (
   <Box 
