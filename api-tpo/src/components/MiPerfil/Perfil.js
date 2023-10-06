@@ -5,10 +5,14 @@ import { Link } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import './Perfil.css';
+import {UserContext} from '../UserProvider/UserProvider'
+import { useContext } from 'react';
 
 export default function FormPropsTextFields() {
+  const userProvider = useContext(UserContext);
   return (
     <Box
+
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '35ch' },
@@ -23,7 +27,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="outlined-required"
           label="Nombre"
-          defaultValue="Agustina"
+          defaultValue={userProvider.user.nombre}
           InputProps={{
             readOnly: true,
           }}
@@ -34,7 +38,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="outlined-required"
           label="Apellido"
-          defaultValue="Cafiero"
+          defaultValue={userProvider.user.apellido}
           InputProps={{
             readOnly: true,
           }}
@@ -45,7 +49,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="outlined-required"
           label="Correo electrónico"
-          defaultValue="acafiero@gmail.com"
+          defaultValue={userProvider.user.usuario}
           InputProps={{
             readOnly: true,
           }}
@@ -56,7 +60,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="outlined-required"
           label="Teléfono"
-          defaultValue="1145678909"
+          defaultValue={userProvider.user.telefono}
           InputProps={{
             readOnly: true,
           }}
@@ -66,7 +70,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="standard-helperText"
           label="Título"
-          defaultValue="Ing. en Sistemas"
+          defaultValue={userProvider.user.titulo}
           InputProps={{
             readOnly: true,
           }}
@@ -76,7 +80,7 @@ export default function FormPropsTextFields() {
           className='form'
           id="outlined-multiline-flexible"
           label="Experiencia"
-          defaultValue="Base de Datos, Java, Cobol"
+          defaultValue={userProvider.user.experiencia}
           multiline
           maxRows={4}
           InputProps={{

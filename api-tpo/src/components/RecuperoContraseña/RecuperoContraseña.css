@@ -1,0 +1,68 @@
+.form{
+    background-color: #fff;
+    border-radius: 4px;
+    align-self: center;
+
+}
+
+.bPrincipalRec{
+    border-radius: 6px;
+    border: 2px solid #7F6BB6;
+    background: #7F6BB6;   
+    display: flex;
+    width: 300px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+}
+
+.bSecundarioRec{
+    display: flex;
+    width: 250px;
+    border-radius: 6px;
+    border: 2px solid #7F6BB6;
+    background: #fff;   
+    display: flex;
+    width: 300px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.blink{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.botonesRecupero{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 4px;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.texto{
+color: #333;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+align-self: center;
+}
+
+.moduloRecupero{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+}

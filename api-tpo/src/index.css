@@ -54,6 +54,19 @@ body {
   display: flex;
   justify-content:initial;
   flex-wrap: wrap;
+  width: 90%;
+}
+
+.categorias-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.curso-card-container{
+  display: flex;
+  justify-content:initial;
+  flex-wrap: wrap;
 }
 
 #login-container{

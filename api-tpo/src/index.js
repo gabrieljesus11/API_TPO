@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
@@ -12,9 +12,11 @@ import Contratar from "./routes/Contratar";
 import Login from "./routes/Login";
 import Filtros from "./routes/Filtros";
 import Registro from "./routes/Registro";
+import Recupero from "./routes/Recupero";
 import ABMcomentarios from "./routes/ABMcomentarios";
 import { AuthProvider } from './auth/AuthProvider';
 import App from './App';
+import UserProvider from "./components/UserProvider/UserProvider"
 
 
 const router = createBrowserRouter([
@@ -73,13 +75,21 @@ const router = createBrowserRouter([
     element: <ABMcomentarios />,
   },
 
+  {
+    path: "/recuperoContrasena",
+    element: <Recupero />,
+  },
+
+
 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <UserProvider value = {{}}>
+      <RouterProvider router={router} />
+    </UserProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

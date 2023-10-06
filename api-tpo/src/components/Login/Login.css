@@ -25,3 +25,55 @@ font-weight: 600;
 line-height: 16px;
 text-decoration-line: underline;
 }
+
+#login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #elemento-login{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  
+
+  .bPrincipalLog{
+    border-radius: 6px;
+    border: 2px solid #7F6BB6;
+    background: #7F6BB6;   
+    display: flex;
+    width: 300px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+}
+
+.bSecundarioLog{
+    display: flex;
+    width: 250px;
+    border-radius: 6px;
+    border: 2px solid #7F6BB6;
+    background: #fff;   
+    display: flex;
+    width: 300px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.botonesLogin{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 4px;
+  justify-content: space-between;
+  gap: 8px;
+}

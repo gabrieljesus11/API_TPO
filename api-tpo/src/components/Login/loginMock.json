@@ -1,0 +1,22 @@
+{
+    "database": [
+        {"usuario":"usuario@mail.com",
+        "password":"password",
+        "nombre": "Usuario",
+        "apellido": "Generico",
+        "telefono": "+584163778318",
+        "titulo": "El bromas",
+        "experiencia": "En sufrirla"},
+        {"usuario":"agus@mail.com",
+        "password":"agus",
+        "nombre": "Agustina Cafiero"},
+        {"usuario":"gabi@mail.com",
+        "password":"gabi",
+        "nombre": "Gabriel Gutierrez"}
+    ],
+
+    "errors": {
+        "username": "Correo invalido.",
+        "password": "Contraseña incorrecta."
+    }
+}
