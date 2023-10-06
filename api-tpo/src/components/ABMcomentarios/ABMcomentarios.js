@@ -10,52 +10,82 @@ import Rating from '@mui/material/Rating';
 import { Link } from "react-router-dom";
 import CardActions from '@mui/material/CardActions';
 import Chip from '@mui/material/Chip';
+import { useState } from 'react';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 export default function AlignItemsList() {
-  return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+  const [showCard, setShowCard] = useState(true)
+  const [blockCard, setBlockCard] = useState(true)
+  const [openSuccess, setOpenSuccess] = React.useState(false);
+  const [openError, setOpenError] = React.useState(false);
+  
+  const handleAceptar = (event)=>{
+    event.preventDefault();
+    setShowCard(false)
+    setOpenSuccess(true)
+  }
+  const handleBloquear = (event)=>{
+    event.preventDefault();
+    setBlockCard(false)
+    setOpenError(true)
+  }
 
-    <div className="chip">
-    <Chip label="Curso Marketing" color="primary" />
-  </div>
-      <ListItem alignItems="flex-start">
+  const handleCloseSuccess = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenSuccess(false);
+  };
+
+  const handleCloseError = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpenError(false);
+  };
+  return (
+    <div>
+      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <div className="chip">
+        <Chip label="Curso Marketing" color="primary" />
+      </div>
+      <ListItem alignItems="flex-start" sx={{display: showCard ? 'default' : 'none'}}>
         <ListItemAvatar>
           <Avatar alt="Tomás Rodriguez" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
-        <ListItemText
-        
-          primary="Tomás Rodriguez"
-          secondary={
-            <React.Fragment>
-            
-              <Typography
-                sx={{ display: 'inline' }}
-                component="span"
-                variant="body2"
-                color="text.primary"
-              >
-                Muy buen curso, lo recomiendo 100%
-              </Typography>
-              <CardActions>
+        <ListItemText 
+        primary="Tomás Rodriguez"
+        secondary={
+        <React.Fragment>
+        <Typography
+        sx={{ display: 'inline' }}
+        component="span"
+        variant="body2"
+        color="text.primary"
+        >
+        Muy buen curso, lo recomiendo 100%
+        </Typography>
+        <CardActions>
 
-                <div className="botonPrincipal">
-                  <Link to={"/"} className="linkPrimario">Aceptar</Link>
-                </div>
+        <div className="botonPrincipal">
+          <Link onClick={handleAceptar} className="linkPrimario">Aceptar</Link>
+        </div>
 
-                <div className="botonSecundario">
-                  <Link to={"/"} className="linkSecundario">Bloquear</Link>
-                </div>
+        <div className="botonSecundario">
+          <Link onClick={handleBloquear} className="linkSecundario">Bloquear</Link>
+        </div>
 
-            </CardActions>
-              
-            </React.Fragment>
-          }
+        </CardActions>
+
+        </React.Fragment>
+        }
         />
       </ListItem>
-
-      <Divider variant="inset" component="li" />
-      
-      <ListItem alignItems="flex-start">
+      <Divider variant="inset" component="li" />     
+      <ListItem alignItems="flex-start" sx={{display: blockCard ? 'default' : 'none'}}>
         <ListItemAvatar>
           <Avatar alt="Martin Gomez" src="/static/images/avatar/2.jpg" />
         </ListItemAvatar>
@@ -82,7 +112,7 @@ export default function AlignItemsList() {
             </div>
 
             <div className="botonSecundario">
-                <Link to={"/"} className="linkSecundario">Bloquear</Link>
+                <Link onClick={handleBloquear} className="linkSecundario">Bloquear</Link>
             </div>
 
             </CardActions>
@@ -125,13 +155,10 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-
-
-<br/>
-
+      <br/>
       <div className="chip">
-    <Chip label="Curso Diseño" color="primary" />
-  </div>
+      <Chip label="Curso Diseño" color="primary" />
+      </div>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Tomás Rodriguez" src="/static/images/avatar/1.jpg" />
@@ -166,16 +193,16 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-
-
-
-
-    </List>
-
-
-
-
-
-
-  );
+      </List>
+      <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleCloseSuccess}>
+      <Alert onClose={handleCloseSuccess} severity="success" sx={{ width: '100%' }}>
+        Se ha aceptado el comentario 👍
+      </Alert>
+      </Snackbar>
+      <Snackbar open={openError} autoHideDuration={5000} onClose={handleCloseError}>
+      <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+        Se ha bloqueado el comentario 🚫
+      </Alert>
+      </Snackbar>
+    </div>);
 }

@@ -1,15 +1,19 @@
 .banner {
-        display: flex;
-        justify-content: space-around;
-        height: 10%;
-        width: 100%;
-        align-self: center;
-        align-items: center;
-        flex: auto;
-        justify-content: center;
+	display: flex;
+	justify-content: center;
+	height: auto;
+	width: 100%;
+	align-self: center;
+	align-items: center;
+	flex: auto;
+	justify-content: center;
 }
 
-.banner img{
-        height: auto;
-		width:100%;
+.bannerImage{
+    height: 40rem;
+	width:100%;
+}
+
+.bannerImageContainer{
+	height: auto
 }
