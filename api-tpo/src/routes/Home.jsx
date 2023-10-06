@@ -9,7 +9,7 @@ import Categorias from "../components/Categorias/Categorias";
 export default function Home(){
     return <div className="flex-wrap place-items-center">
     <section>
-    <NavBar />
+    <NavBar/>
     </section>
 
     <section className="">

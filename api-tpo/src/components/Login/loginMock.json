@@ -1,11 +1,18 @@
 {
     "database": [
         {"usuario":"usuario@mail.com",
-        "password":"password"},
+        "password":"password",
+        "nombre": "Usuario",
+        "apellido": "Generico",
+        "telefono": "+584163778318",
+        "titulo": "El bromas",
+        "experiencia": "En sufrirla"},
         {"usuario":"agus@mail.com",
-        "password":"agus"},
+        "password":"agus",
+        "nombre": "Agustina Cafiero"},
         {"usuario":"gabi@mail.com",
-        "password":"gabi"}
+        "password":"gabi",
+        "nombre": "Gabriel Gutierrez"}
     ],
 
     "errors": {

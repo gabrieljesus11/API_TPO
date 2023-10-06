@@ -3,21 +3,23 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import './Login.css'
 import { CardContent } from '@mui/material';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import loginMock from './loginMock.json'
 import { BrowserRouter as Router, Switch, 
-  Route, Redirect,} from "react-router-dom";
+  Route, Redirect, withRouter } from "react-router-dom";
+import {UserContext} from '../UserProvider/UserProvider'
 
-export default function FormPropsTextFields() {
+export default function Login() {
 
 const [userName, setUserName] = useState('')
 const [password, setPassword] = useState('')
+const navigate = useNavigate()
 const [errorMessages, setErrorMessages] = useState({});
 const [isSubmitted, setIsSubmitted] = useState(false);
-
+const UserProvider = useContext(UserContext)
 const handleSubmit = (event) =>{
   event.preventDefault();
 
@@ -28,8 +30,9 @@ const handleSubmit = (event) =>{
       setErrorMessages({"name" : "password", message: loginMock.errors.password})
     }
     else{
-      setIsSubmitted(true)
-      window.location.href = './'
+      setIsSubmitted(true);
+      UserProvider.setUser(userData)
+      navigate('/')
     }
   }
   else{
@@ -41,7 +44,6 @@ const handleSubmit = (event) =>{
 
 // Generate JSX code for error message
 const renderErrorMessage = (name) =>{
-  console.log(name, name === errorMessages.name)
   if(name === errorMessages.name){ 
     return (<div className="error">{errorMessages.message}</div>);}
 }
@@ -99,16 +101,16 @@ const renderForm = (
 );
 
 return (
-  <Box 
-    className="login-container"
-    component="form"
-    sx={{
-      '& .MuiTextField-root': { m: 1, width: '45ch' },
-    }}
-    noValidate
-    autoComplete="off"
-  >
-    {renderForm}
-  </Box>
+    <Box 
+      className="login-container"
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '45ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      {renderForm}
+    </Box>
 );
 }

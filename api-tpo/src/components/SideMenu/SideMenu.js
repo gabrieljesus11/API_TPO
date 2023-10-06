@@ -17,6 +17,8 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 import './SideMenu.css';
+import {UserContext} from '../UserProvider/UserProvider'
+import {useContext } from 'react';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -62,6 +64,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function TemporaryDrawer() {
+  
+  const UserProvider = useContext(UserContext)
   const [state, setState] = React.useState({
     left: false,
 });
@@ -78,7 +82,9 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  
+  const handleLoggedItems = () =>{
+
+  }
 
   const list = (anchor) => (
     <Box
@@ -111,7 +117,7 @@ export default function TemporaryDrawer() {
               <Link to={"/"}>Inicio</Link>
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
             <ListItemButton>
               <ListItemIcon>
                 <PersonIcon />

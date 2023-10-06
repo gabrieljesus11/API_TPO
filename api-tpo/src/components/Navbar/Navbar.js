@@ -12,65 +12,81 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { IconButton, Typography } from '@mui/material';
 import { Link } from "react-router-dom";
+import EmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import {UserContext} from '../UserProvider/UserProvider'
+import { useState, useContext } from 'react';
 
-const settings = [<Link to={"/login"}>Ingresar</Link>];
+export default function NavBar(){
+  const userProvider = useContext(UserContext);
+  const [userIsLogged, setUserIsLogged] = useState(false)
 
+  const handleLogOut = ()=>{
+    userProvider.setUser(null);
+    console.log(userProvider.user)
+    console.log(userIsLogged)
+  }
 
-
-
-
-export default function SearchAppBar(){
-
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const settings = userProvider.user != null ? 
+  [<Link to={"/miPerfil"}>Mi Perfil</Link>, 
+  <Link to={"/"} onClick={handleLogOut}>Cerrar Sesión</Link>]:
+  [<Link to={"/login"}>Ingresar</Link>];
+  
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+    console.log(userProvider.user)
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
+  const handleAvatarIcon = () =>{
+    return userProvider.user != null ? <EmoticonIcon/> : <PersonIcon/>
+  }
+
   return (
-    <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static" color="grey" display="flex" alignContent='center'>
-        <Toolbar style = {{justifyContent: 'space-between'}}>
-          <div className='menu-and-logo' >
-            <TemporaryDrawer className='top-element'/>
-            <img src={logo} alt= 'Education Hub Logo' className='top-element'/>
-          </div>
+      <Box sx={{ flexGrow: 1}}>
+        <AppBar position="static" color="grey" display="flex" alignContent='center'>
+          <Toolbar style = {{justifyContent: 'space-between'}}>
+            <div className='menu-and-logo' >
+              <TemporaryDrawer className='top-element'/>
+              <img src={logo} alt= 'Education Hub Logo' className='top-element'/>
+            </div>
           
-          <div className='login-register-button'>
-            <IconButton onClick={handleOpenUserMenu}>
-              <Avatar alt='Mr Nobody' > 
-                <PersonIcon/> 
+            
+            <div className='login-register-button'>
+              <IconButton onClick={handleOpenUserMenu}>
+              <Avatar alt='Usuario' > 
+                  {handleAvatarIcon}
               </Avatar>
-            </IconButton>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-                ))}
-                </Menu>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
+              </IconButton>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                  ))}
+                  </Menu>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </Box>
   );
 }
