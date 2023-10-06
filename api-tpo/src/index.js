@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
@@ -15,6 +15,7 @@ import Registro from "./routes/Registro";
 import ABMcomentarios from "./routes/ABMcomentarios";
 import { AuthProvider } from './auth/AuthProvider';
 import App from './App';
+import UserProvider from "./components/UserProvider/UserProvider"
 
 
 const router = createBrowserRouter([
@@ -79,7 +80,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <UserProvider value = {{}}>
+      <RouterProvider router={router} />
+    </UserProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
