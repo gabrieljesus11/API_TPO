@@ -74,7 +74,7 @@ export default function TemporaryDrawer() {
   const [searchInput, setSearchInput] = React.useState('')
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      navigate('./cursosDisponibles')
+      navigate('../cursosDisponibles')
     }
   }
 
