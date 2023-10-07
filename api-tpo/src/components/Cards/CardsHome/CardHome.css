@@ -1,11 +1,10 @@
 .card{
     width: 100%;
-    max-width: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-items:flex-start;
     position: relative;
-    padding: 8px;
+    padding: 2rem;
     background-color: #F8F8FB;
 }
 

@@ -37,189 +37,186 @@ export default function MediaCard() {
   const [value, setValue] = React.useState(2);
 
   return (
-    
-    <Card sx={{ maxWidth: 500 }}>
-    <div className='cardPDP'>
+    <section>
+    <Card >
+      <div className='cardPDP' sx={{ display:'flex', justifyContent:'center', width: '100%', flexDirection: 'row'}}>
+        <div sx = {{width: '40%'}}>
+          <div className='imagenPDP'>
+            <img src={foto} alt="foto" />
+          </div>
 
-      <div className='imagenPDP'>
-        <img src={foto} alt="foto" />
+          <div className='modulo'>
+
+          <CardContent>
+              <div className="titulo">
+              Curso de Marketing
+              </div>
+
+            <div className="fecha">
+                Empieza el 09/10/2023
+              </div>
+              <div className="chip">
+            <Chip label="Duración 3 meses" color="primary" />
+            </div>
+
+            <div className="dias">
+              Lunes y Miercoles 20hs.
+            </div>
+
+            <div className="precio">
+              $20.000
+            </div>
+          </CardContent>
+
+          <CardActions>
+          
+            <div className="botonPrincipal">
+              <Link to={"/contratar"} className="linkPrimario">Contratar</Link>
+            </div>
+
+          </CardActions>
+
+          </div>
+        </div>
       </div>
+    </Card>
+    <Card>
+              <div>
+        <CardContent>
+          <ListItemButton>
+            <ListItemIcon>
+            <div className='icono'>
+              <PersonIcon />
+            </div>
+            </ListItemIcon>
+            <div className='subtitulo'>
+              Responsable: Lucia Vazquez
+            </div>
+          </ListItemButton>
 
-      <div className='modulo'>
+          <Typography variant="body2" color="text.secondary">
+          <ListItem>Titulo Universitario: Administración de Empresas</ListItem>
+          <ListItem>Cursos de Negocios</ListItem>
+          <ListItem>Posgrado Marketing</ListItem>
+          </Typography>
+        </CardContent>
 
         <CardContent>
-          <div className="titulo">
-           Curso de Marketing
-          </div>
-
-         <div className="fecha">
-            Empieza el 09/10/2023
-          </div>
-          <div className="chip">
-        <Chip label="Duración 3 meses" color="primary" />
-      </div>
-
-      <div className="dias">
-        Lunes y Miercoles 20hs.
-      </div>
-
-      <div className="precio">
-        $20.000
-      </div>
-      </CardContent>
-
-      <CardActions>
-      
-        <div className="botonPrincipal">
-          <Link to={"/contratar"} className="linkPrimario">Contratar</Link>
-        </div>
-
-      </CardActions>
-
-      </div>
- 
-
-      <CardContent>
-
-      <ListItemButton>
-      <ListItemIcon>
-          <div className='icono'>
-          <PersonIcon />
-          </div>
-        </ListItemIcon>
-        <div className='subtitulo'>
-        Responsable: Lucia Vazquez
-        </div>
-      </ListItemButton>
-
-
-        <Typography variant="body2" color="text.secondary">
-        <ListItem>Titulo Universitario: Administración de Empresas</ListItem>
-        <ListItem>Cursos de Negocios</ListItem>
-        <ListItem>Posgrado Marketing</ListItem>
-        </Typography>
-      </CardContent>
-      <CardContent>
-
-      <ListItemButton>
-      <ListItemIcon>
+          <ListItemButton>
+          <ListItemIcon>
           <div className='icono'>
           <EditNoteIcon />
           </div>
-        </ListItemIcon>
-        <div className='subtitulo'>
-        Descripción del curso
-        </div>
-      </ListItemButton>
+          </ListItemIcon>
+          <div className='subtitulo'>
+          Descripción del curso
+          </div>
+          </ListItemButton>
 
 
-        <Typography variant="body2" color="text.secondary">
-        Lorem ipsum dolor sit amet consectetur. Lobortis eget augue sed et. Suspendisse tempus tristique consequat sed imperdiet aliquet condimentum etiam diam.
-        </Typography>
-      </CardContent>
-      <CardContent>
+          <Typography variant="body2" color="text.secondary">
+          Lorem ipsum dolor sit amet consectetur. Lobortis eget augue sed et. Suspendisse tempus tristique consequat sed imperdiet aliquet condimentum etiam diam.
+          </Typography>
 
-      <ListItemButton>
-      <ListItemIcon>
+          <ListItemButton>
+          <ListItemIcon>
           <div className='icono'>
           <ReviewsIcon />
           </div>
-        </ListItemIcon>
-        <div className='subtitulo'>
+          </ListItemIcon>
+          <div className='subtitulo'>
           Comentarios
-        </div>
-      </ListItemButton>
+          </div>
+          </ListItemButton>
 
-      <div className='comentario'>
-      <Rating name="read-only" value={5} readOnly />
-      <div className='tituloComentario'>
-        Romina
-      </div>
-        <div className='descripcionComentario'>
-        Excelente el curso
-        </div>
-      </div>
-      
-        <div className='comentario'>
-        <Rating name="read-only" value={5} readOnly />
-        <div className='tituloComentario'>
-        Karina
-        </div>
-        <div className='descripcionComentario'>
-        Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.
-        </div>
-        </div>
+          <div className='comentario'>
+          <Rating name="read-only" value={5} readOnly />
+          <div className='tituloComentario'>
+          Romina
+          </div>
+          <div className='descripcionComentario'>
+          Excelente el curso
+          </div>
+          </div>
 
-        <div>
+          <div className='comentario'>
+          <Rating name="read-only" value={5} readOnly />
+          <div className='tituloComentario'>
+          Karina
+          </div>
+          <div className='descripcionComentario'>
+          Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.
+          </div>
+          </div>
+
+          <div>
 
 
-        <div className="botonPrincipal">
+          <div className="botonPrincipal">
           <div className="linkPrimario" onClick={handleOpen}>
           Comentar
           </div>
-        </div>
-        
+          </div>
 
-      
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
+
+
+          <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          >
+          <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Agregar Comentario
+          Agregar Comentario
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2}}>
-            Completá tus datos y dejanos tu comentario sobre este curso.
+          Completá tus datos y dejanos tu comentario sobre este curso.
           </Typography>
-          
+
           <TextField
           className='formComentario'
           required
           id="outlined-required"
           label="Nombre"
           defaultValue=""
-        />
+          />
           <TextField
           className='formComentario'
           required
           id="outlined-required"
           label="Mail"
           defaultValue=""
-        />
-        <TextField
-        className='formComentario'
+          />
+          <TextField
+          className='formComentario'
           id="outlined-required"
           label="Comentario"
           defaultValue=""
           multiline
-        />
-        <div className="rating">
-      <Typography component="legend">Puntuación del curso</Typography>
-      <Rating
-        name="simple-controlled"
-        value={value}
-        onChange={(event, newValue) => {
+          />
+          <div className="rating">
+          <Typography component="legend">Puntuación del curso</Typography>
+          <Rating
+          name="simple-controlled"
+          value={value}
+          onChange={(event, newValue) => {
           setValue(newValue);
-        }}
-      />
-      </div>
+          }}
+          />
+          </div>
 
-      <div className="botonPrincipal">
+          <div className="botonPrincipal">
           <div className="linkPrimario" onClick={handleClose}>
           Enviar
           </div>
+          </div>
+
+          </Box>
+          </Modal>
+          </div>
+        </CardContent>
         </div>
-
-        </Box>
-      </Modal>
-    </div>
-      </CardContent>
-
-      </div>
     </Card>
-    
-  );
+    </section>);
 }

@@ -9,49 +9,46 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import BrushIcon from '@mui/icons-material/Brush';
 import Divider from '@mui/material/Divider';
 import './Categorias.css';
+import {UserContext} from '../UserProvider/UserProvider'
+import {useContext } from 'react';
 
 
 export default function InsetDividers() {
+  const UserProvider = useContext(UserContext);
   return (
 
-    <section className="md-mb-4">
+    <section style={{margin: '2rem'}}>
     <div className="h2">Categorías</div>
         
     <List
       sx={{
-        flexGrow: 1 ,
         display: "flex",
-        alignContent: "center" ,
-        position: "static" ,
-        width: '100%',
-        maxWidth: 360,
-        bgcolor: 'background.paper',
+        justifyContent: "space-around",
+        alignContent: "center",
+        flexWrap: 'wrap',
+        flexDirection: 'row',
       }}
       
     >
-
-    
-      <ListItem>
+      <ListItem className="categoria" sx={{width: '20%'}}>
         <ListItemAvatar>
-          <Avatar className='avatar'>
+          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
             <BarChartIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Cursos Negocios" />
       </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className="categoria" sx={{width: '20%'}}> 
         <ListItemAvatar>
-          <Avatar>
+          <Avatar >
             <ComputerIcon />
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary="Cursos IT" />
       </ListItem>
-      <Divider variant="inset" component="li" />
-      <ListItem>
+      <ListItem className='categoria' sx={{width: '20%'}}>
         <ListItemAvatar>
-          <Avatar className='avatar'>
+          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
             <BrushIcon />
           </Avatar>
         </ListItemAvatar>

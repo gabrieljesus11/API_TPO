@@ -11,7 +11,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
 import CallIcon from '@mui/icons-material/Call';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
@@ -66,12 +66,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function TemporaryDrawer() {
-  
+  const navigate = useNavigate();
   const UserProvider = useContext(UserContext)
   const [state, setState] = React.useState({
     left: false,
 });
-
+  const [searchInput, setSearchInput] = React.useState('')
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      navigate('./cursosDisponibles')
+    }
+  }
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -84,18 +89,20 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const handleLoggedItems = () =>{
-
-  }
-
   const list = (anchor) => (
     <section>
     <div className='search-bar'>
-      <Search style={{display: "flex", width: '90%', margin: 'auto 0', backgroundColor: '#eee'}} >
+      <Search 
+      style={{display: "flex", width: '90%', margin: 'auto 0', backgroundColor: '#eee'}} 
+     >
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
       <StyledInputBase
+        onChange={(event) => {
+          setSearchInput(event.target.value);
+        }}
+        onKeyDown={handleKeyDown}
         placeholder="Buscar"
         inputProps={{ 'aria-label': 'buscar' }}
       />
@@ -123,10 +130,10 @@ export default function TemporaryDrawer() {
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
-              {}<Link to={"/miPerfil"}>Mi perfil</Link>
+              <Link to={"/miPerfil"}>Mi perfil</Link>
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
             <ListItemButton to={"/abmcomentarios"}>
               <ListItemIcon>
                 <RateReviewIcon />
