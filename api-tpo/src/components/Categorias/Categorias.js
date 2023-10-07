@@ -1,61 +1,49 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import ComputerIcon from '@mui/icons-material/Computer';
-import BrushIcon from '@mui/icons-material/Brush';
-import Divider from '@mui/material/Divider';
 import './Categorias.css';
-import {UserContext} from '../UserProvider/UserProvider'
-import {useContext } from 'react';
+import imagen1 from "../../img/categoria1.png";
+import imagen2 from "../../img/categoria2.png";
+import imagen3 from "../../img/categoria3.png";
+import imagen4 from "../../img/categoria4.png";
+
 
 
 export default function InsetDividers() {
-  const UserProvider = useContext(UserContext);
   return (
 
-    <section style={{margin: '2rem'}}>
-    <div className="h2">Categorías</div>
-        
-    <List
-      sx={{
-        display: "flex",
-        justifyContent: "space-around",
-        alignContent: "center",
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-      }}
-      
-    >
-      <ListItem className="categoria" sx={{width: '20%'}}>
-        <ListItemAvatar>
-          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
-            <BarChartIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos Negocios" />
-      </ListItem>
-      <ListItem className="categoria" sx={{width: '20%'}}> 
-        <ListItemAvatar>
-          <Avatar >
-            <ComputerIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos IT" />
-      </ListItem>
-      <ListItem className='categoria' sx={{width: '20%'}}>
-        <ListItemAvatar>
-          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
-            <BrushIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos Diseño" />
-      </ListItem>
-    </List>
-    </section>
+<div className='listadoCategoria'>
+  <div className='categoria'>
+    <div className='fotoCategoria'>
+    <img src={imagen1} alt="banner" class= "bannerImage"/>
+    </div>
+    <div className='textoCategoria'>
+      Cursos de Negocios
+    </div>
+  </div>
+  <div className='categoria'>
+    <div className='fotoCategoria'>
+    <img src={imagen2} alt="banner" class= "bannerImage"/>
+    </div>
+    <div className='textoCategoria'>
+      Cursos de Programación
+    </div>
+  </div>
+  <div className='categoria'>
+    <div className='fotoCategoria'>
+    <img src={imagen3} alt="banner" class= "bannerImage"/>
+    </div>
+    <div className='textoCategoria'>
+      Cursos de Marketing
+    </div>
+  </div>
+  <div className='categoria'>
+    <div className='fotoCategoria'>
+    <img src={imagen4} alt="banner" class= "bannerImage"/>
+    </div>
+    <div className='textoCategoria'>
+      Cursos de Diseño
+    </div>
+  </div>
+</div>
 
     
   );

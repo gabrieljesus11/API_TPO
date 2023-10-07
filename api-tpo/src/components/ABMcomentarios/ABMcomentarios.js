@@ -24,7 +24,7 @@ export default function AlignItemsList() {
   const [openError, setOpenError] = React.useState(false);
 
   const foo = ()=>{
-    UserProvider.user == true
+    
   }
   
   const handleAceptar = (event)=>{
