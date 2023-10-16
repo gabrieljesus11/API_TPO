@@ -2,7 +2,8 @@ import NavBar from "../components/Navbar/Navbar";
 import Banner from "../components/Banner/Banner";
 import Card from "../components/Cards/CardsHome/CardHome";
 import Categorias from "../components/Categorias/Categorias";
-
+import bannerMedio from "../img/BannerMobileMedio.png";
+import Footer from "../components/Footer/Footer";
 
 
 export default function Home(){
@@ -15,9 +16,11 @@ export default function Home(){
         <Banner />
     </section>
 
-    <section className="grid gap-1 md:grid-cols-1 xl:grid-cols-1 lg:grid-cols-1">
+    <section className="">
         <Categorias />
     </section>
+
+
 
     <section>
         <div className="h2" style={{"margin-left": "2rem"}}>Cursos Destacados</div>
@@ -29,6 +32,14 @@ export default function Home(){
             <Card />
         </div>
         </div>
+    </section>
+
+    <section>
+    <img src={bannerMedio} alt="bannerMedio" class= "bannerMedio"/>
+    </section>
+
+    <section>
+        <Footer />
     </section>
     
     </div>

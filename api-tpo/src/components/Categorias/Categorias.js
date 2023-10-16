@@ -4,16 +4,17 @@ import imagen1 from "../../img/categoria1.png";
 import imagen2 from "../../img/categoria2.png";
 import imagen3 from "../../img/categoria3.png";
 import imagen4 from "../../img/categoria4.png";
+import { Carousel } from "@material-tailwind/react";
 
 
 
 export default function InsetDividers() {
   return (
-
+<Carousel>
 <div className='listadoCategoria'>
   <div className='categoria'>
     <div className='fotoCategoria'>
-    <img src={imagen1} alt="banner" class= "bannerImage"/>
+    <img src={imagen1} alt="foto" class= "foto"/>
     </div>
     <div className='textoCategoria'>
       Cursos de Negocios
@@ -21,7 +22,7 @@ export default function InsetDividers() {
   </div>
   <div className='categoria'>
     <div className='fotoCategoria'>
-    <img src={imagen2} alt="banner" class= "bannerImage"/>
+    <img src={imagen2} alt="foto" class= "foto"/>
     </div>
     <div className='textoCategoria'>
       Cursos de Programación
@@ -29,7 +30,7 @@ export default function InsetDividers() {
   </div>
   <div className='categoria'>
     <div className='fotoCategoria'>
-    <img src={imagen3} alt="banner" class= "bannerImage"/>
+    <img src={imagen3} alt="foto" class= "foto"/>
     </div>
     <div className='textoCategoria'>
       Cursos de Marketing
@@ -37,13 +38,14 @@ export default function InsetDividers() {
   </div>
   <div className='categoria'>
     <div className='fotoCategoria'>
-    <img src={imagen4} alt="banner" class= "bannerImage"/>
+    <img src={imagen4} alt="foto" class= "foto"/>
     </div>
     <div className='textoCategoria'>
       Cursos de Diseño
     </div>
   </div>
 </div>
+</Carousel>
 
     
   );
