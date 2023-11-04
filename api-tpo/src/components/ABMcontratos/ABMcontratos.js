@@ -19,6 +19,8 @@ export default function AlignItemsList() {
     <div className="chip">
     <Chip label="Solicitudes" color="primary" />
   </div>
+
+  <div className='listadoSolicitudes'>
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
@@ -169,12 +171,17 @@ export default function AlignItemsList() {
       </ListItem>
       </div>
 
+      </div>
+
 
 <br/>
 
       <div className="chip">
     <Chip label="Aceptadas" color="primary" />
   </div>
+
+  <div className='listadoSolicitudes'>
+
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
@@ -221,10 +228,16 @@ export default function AlignItemsList() {
       </ListItem>
       </div>
 
+      </div>
+
+
+
 
       <div className="chip">
     <Chip label="Finalizadas" color="primary" />
   </div>
+
+  <div className='listadoSolicitudes'>
 
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
@@ -262,6 +275,8 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
+      </div>
+
       </div>
 
 

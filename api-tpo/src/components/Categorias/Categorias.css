@@ -1,8 +1,11 @@
 .listadoCategoria{
-    display: inline-flex;
+    display: grid;
     align-items: flex-start;
-    gap: 40px;
-    margin: 30px;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
 }
 
 .categoria{
@@ -10,18 +13,16 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    column-gap: normal;
+    
 }
 
-.fotoCategoria{
-    width: 100px;
-    height: 100px;
-    align-items: center;
-}
-
-.textoCategoria{
+.tituloCategorias{
     color: #333;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+text-align:start;
+padding: 16px 8px;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }

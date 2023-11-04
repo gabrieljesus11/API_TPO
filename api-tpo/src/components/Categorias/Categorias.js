@@ -1,51 +1,30 @@
 import * as React from 'react';
 import './Categorias.css';
-import imagen1 from "../../img/categoria1.png";
-import imagen2 from "../../img/categoria2.png";
-import imagen3 from "../../img/categoria3.png";
-import imagen4 from "../../img/categoria4.png";
+import imagen1 from "../../img/cat1.png";
+import imagen2 from "../../img/cat2.png";
+import imagen3 from "../../img/cat3.png";
 import { Carousel } from "@material-tailwind/react";
 
 
 
 export default function InsetDividers() {
   return (
-<Carousel>
-<div className='listadoCategoria'>
-  <div className='categoria'>
-    <div className='fotoCategoria'>
-    <img src={imagen1} alt="foto" class= "foto"/>
-    </div>
-    <div className='textoCategoria'>
-      Cursos de Negocios
-    </div>
+<div className='categorias'>
+    <div className='tituloCategorias'>
+            Categorías destacadas
+        </div>
+<div className='listadoCategoria' align="center">
+
+  <div className='categoria' align="center">
+  <img src={imagen1} alt="foto" class= "foto"/>
   </div>
-  <div className='categoria'>
-    <div className='fotoCategoria'>
-    <img src={imagen2} alt="foto" class= "foto"/>
-    </div>
-    <div className='textoCategoria'>
-      Cursos de Programación
-    </div>
-  </div>
-  <div className='categoria'>
-    <div className='fotoCategoria'>
-    <img src={imagen3} alt="foto" class= "foto"/>
-    </div>
-    <div className='textoCategoria'>
-      Cursos de Marketing
-    </div>
-  </div>
-  <div className='categoria'>
-    <div className='fotoCategoria'>
-    <img src={imagen4} alt="foto" class= "foto"/>
-    </div>
-    <div className='textoCategoria'>
-      Cursos de Diseño
-    </div>
+  <div className='categoria' align="center">
+  <img src={imagen2} alt="foto" class= "foto"/>
+  </div>  <div className='categoria' align="center">
+  <img src={imagen3} alt="foto" class= "foto"/>
   </div>
 </div>
-</Carousel>
+</div>
 
     
   );
