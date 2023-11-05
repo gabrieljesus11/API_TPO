@@ -1,0 +1,10 @@
+.listadoRedes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+	flex-direction: row;
+	align-content: center;
+    margin: 30px;
+
+}

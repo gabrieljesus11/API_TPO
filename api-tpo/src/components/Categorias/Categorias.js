@@ -1,61 +1,30 @@
 import * as React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import ComputerIcon from '@mui/icons-material/Computer';
-import BrushIcon from '@mui/icons-material/Brush';
-import Divider from '@mui/material/Divider';
 import './Categorias.css';
-import {UserContext} from '../UserProvider/UserProvider'
-import {useContext } from 'react';
+import imagen1 from "../../img/cat1.png";
+import imagen2 from "../../img/cat2.png";
+import imagen3 from "../../img/cat3.png";
+import { Carousel } from "@material-tailwind/react";
+
 
 
 export default function InsetDividers() {
-  const UserProvider = useContext(UserContext);
   return (
+<div className='categorias'>
+    <div className='tituloCategorias'>
+            Categorías destacadas
+        </div>
+<div className='listadoCategoria' align="center">
 
-    <section style={{margin: '2rem'}}>
-    <div className="h2">Categorías</div>
-        
-    <List
-      sx={{
-        display: "flex",
-        justifyContent: "space-around",
-        alignContent: "center",
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-      }}
-      
-    >
-      <ListItem className="categoria" sx={{width: '20%'}}>
-        <ListItemAvatar>
-          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
-            <BarChartIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos Negocios" />
-      </ListItem>
-      <ListItem className="categoria" sx={{width: '20%'}}> 
-        <ListItemAvatar>
-          <Avatar >
-            <ComputerIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos IT" />
-      </ListItem>
-      <ListItem className='categoria' sx={{width: '20%'}}>
-        <ListItemAvatar>
-          <Avatar sx={{backgroundColor: '#7F6BB6'}}>
-            <BrushIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText primary="Cursos Diseño" />
-      </ListItem>
-    </List>
-    </section>
+  <div className='categoria' align="center">
+  <img src={imagen1} alt="foto" class= "foto"/>
+  </div>
+  <div className='categoria' align="center">
+  <img src={imagen2} alt="foto" class= "foto"/>
+  </div>  <div className='categoria' align="center">
+  <img src={imagen3} alt="foto" class= "foto"/>
+  </div>
+</div>
+</div>
 
     
   );

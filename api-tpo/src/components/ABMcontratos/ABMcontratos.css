@@ -61,16 +61,17 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 142.857% */
+
 }
 
 .moduloInfo{
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding:  12px 0px;
+padding: 12px 0px;
 gap: 4px;
 align-self: stretch;
-width: 500px;
+width: 100%;
 }
 
 .textoCurso{
@@ -79,7 +80,7 @@ font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: 20px;
-width: 301px;
+width: 100%;
 }
 
 .finalizada{
@@ -88,7 +89,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 700;
 line-height: 20px;
-width: 301px;
+width: 100%;
 }
 
 .cardSolicitud{
@@ -99,8 +100,15 @@ display: flex;
 padding: 16px 19px;
 flex-direction: column;
 align-items: flex-start;
-gap: 10px;
 align-self: stretch;
-width: 600px;
+width: 35rem;
 margin: 12px 0px;
+}
+
+
+.listadoSolicitudes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
 }

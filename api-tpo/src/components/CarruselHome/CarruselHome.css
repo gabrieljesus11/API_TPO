@@ -1,0 +1,27 @@
+.carruselHome{
+margin: 16px 0px;
+padding: 32px;
+background-color: #AA96E1;
+border-radius: 12px;
+
+  }
+
+.tituloCarruselHome{
+color: #333;
+text-align:start;
+padding: 16px 8px;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 4rem;
+  }
+  

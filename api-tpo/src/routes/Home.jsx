@@ -1,12 +1,12 @@
 import NavBar from "../components/Navbar/Navbar";
 import Banner from "../components/Banner/Banner";
-import Card from "../components/Cards/CardsHome/CardHome";
 import Categorias from "../components/Categorias/Categorias";
-
+import Footer from "../components/Footer/Footer";
+import CarruselHome from "../components/CarruselHome/CarruselHome";
 
 
 export default function Home(){
-    return <div className="flex-wrap place-items-center">
+    return <div className="sm:w-full">
     <section>
         <NavBar/>
     </section>
@@ -15,20 +15,16 @@ export default function Home(){
         <Banner />
     </section>
 
-    <section className="grid gap-1 md:grid-cols-1 xl:grid-cols-1 lg:grid-cols-1">
+    <section className="" align="center">
         <Categorias />
     </section>
 
+    <section className="" align="center">
+        <CarruselHome />
+    </section>
+
     <section>
-        <div className="h2" style={{"margin-left": "2rem"}}>Cursos Destacados</div>
-        <div className="curso-card-container">
-        <div
-        className="grid gap-4 md:grid-cols-4 xl:grid-cols-3 lg:grid-cols-6 "> 
-            <Card />
-            <Card />
-            <Card />
-        </div>
-        </div>
+        <Footer />
     </section>
     
     </div>

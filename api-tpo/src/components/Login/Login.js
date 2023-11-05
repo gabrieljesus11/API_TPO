@@ -53,6 +53,7 @@ const renderForm = (
     <div id="login-container">
       <TextField
         required
+        fullWidth
         id="outlined-required"
         label="Correo electrónico"
         defaultValue=""
@@ -64,6 +65,7 @@ const renderForm = (
 
       <TextField
         required
+        fullWidth
         type='password'
         id="outlined-required"
         label="Contraseña"

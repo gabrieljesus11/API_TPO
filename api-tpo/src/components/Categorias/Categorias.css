@@ -1,0 +1,28 @@
+.listadoCategoria{
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
+}
+
+.categoria{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    column-gap: normal;
+    
+}
+
+.tituloCategorias{
+    color: #333;
+text-align:start;
+padding: 16px 8px;
+font-size: 30px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}

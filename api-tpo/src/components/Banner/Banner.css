@@ -1,19 +1,9 @@
-.banner {
-	display: flex;
-	justify-content: center;
-	height: auto;
-	width: 100%;
-	align-self: center;
-	align-items: center;
-	flex: auto;
-	justify-content: center;
-}
-
-.bannerImage{
-    height: 40rem;
-	width:100%;
-}
-
-.bannerImageContainer{
-	height: auto
+.bannerHome{
+	display: grid;
+    align-items: flex-start;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
 }

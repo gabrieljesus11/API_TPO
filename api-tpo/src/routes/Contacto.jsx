@@ -12,7 +12,7 @@ export default function Contacto(){
             <p>¡Queremos escucharte! <br /> Envíanos un mensaje</p>
         </div>
     
-        < div className="contacto-element">
+        <div className="contacto-element">
             <FormContacto />
         </div>
     </section>

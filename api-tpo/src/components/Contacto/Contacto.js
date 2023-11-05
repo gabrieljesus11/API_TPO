@@ -11,7 +11,7 @@ export default function FormPropsTextFields() {
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '35ch' },
+        '& .MuiTextField-root': { m: 1, width: '90%' },
         'display':'flex',
         'justifyContent': 'center',
         'flexDirection': 'column',
