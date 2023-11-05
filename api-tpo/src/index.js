@@ -93,7 +93,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserProvider value = {{}}>
+    <UserProvider>
       <RouterProvider router={router} />
     </UserProvider>
   </React.StrictMode>,

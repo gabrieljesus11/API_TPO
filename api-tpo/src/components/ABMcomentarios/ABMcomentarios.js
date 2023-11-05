@@ -10,6 +10,7 @@ import Rating from '@mui/material/Rating';
 import { Link } from "react-router-dom";
 import CardActions from '@mui/material/CardActions';
 import Chip from '@mui/material/Chip';
+import './ABMcomentarios.css';
 import { useState } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
@@ -60,7 +61,9 @@ export default function AlignItemsList() {
       <div className="chip">
         <Chip label="Curso Marketing" color="primary" />
       </div>
+      <div className='cardComentario'>
       <ListItem alignItems="flex-start" sx={{display: showCard ? 'default' : 'none'}}>
+
         <ListItemAvatar>
           <Avatar alt="Tomás Rodriguez" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
@@ -92,7 +95,9 @@ export default function AlignItemsList() {
         }
         />
       </ListItem>
-      <Divider variant="inset" component="li" />     
+      </div>
+
+      <div className='cardComentario'>
       <ListItem alignItems="flex-start" sx={{display: blockCard ? 'default' : 'none'}}>
         <ListItemAvatar>
           <Avatar alt="Martin Gomez" src="/static/images/avatar/2.jpg" />
@@ -129,7 +134,10 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
-      <Divider variant="inset" component="li" />
+      </div>
+
+
+      <div className='cardComentario'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Sandra Geller" src="/static/images/avatar/3.jpg" />
@@ -163,10 +171,12 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
+      </div>
       <br/>
       <div className="chip">
       <Chip label="Curso Diseño" color="primary" />
       </div>
+      <div className='cardComentario'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Tomás Rodriguez" src="/static/images/avatar/1.jpg" />
@@ -201,6 +211,7 @@ export default function AlignItemsList() {
           }
         />
       </ListItem>
+      </div>
       </List>
       <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleCloseSuccess}>
       <Alert onClose={handleCloseSuccess} severity="success" sx={{ width: '100%' }}>

@@ -1,0 +1,13 @@
+.cardComentario{
+    border-radius: 4px;
+    background: #F8F8FB;
+    box-shadow: 2px 2px 2px 0px rgba(173, 173, 173, 0.25);
+    display: flex;
+    padding: 16px 19px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    width: 400px;
+    margin: 12px 0px;
+    }

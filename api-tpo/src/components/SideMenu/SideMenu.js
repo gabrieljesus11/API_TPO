@@ -74,7 +74,7 @@ export default function TemporaryDrawer() {
   const [searchInput, setSearchInput] = React.useState('')
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      navigate('./cursosDisponibles')
+      navigate('../cursosDisponibles')
     }
   }
 
@@ -149,7 +149,7 @@ export default function TemporaryDrawer() {
               Cursos Disponibles
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
             <ListItemButton to={"/abmcontratos"}>
               <ListItemIcon>
                 <EditNoteIcon />
