@@ -14,8 +14,8 @@ import './ABMcontratos.css';
 
 export default function AlignItemsList() {
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-
+    
+<div className='listadoCompleto'>
     <div className="chip">
     <Chip label="Solicitudes" color="primary" />
   </div>
@@ -279,9 +279,10 @@ export default function AlignItemsList() {
 
       </div>
 
+      </div>
 
 
-    </List>
+
 
 
 

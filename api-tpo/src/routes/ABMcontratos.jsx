@@ -7,7 +7,7 @@ export default function Contratos(){
     return <div>
     <NavBar />
     <div className="landing">
-    <section className="grid gap-4 md:grid-cols-8">
+    <section className="abm">
     <ABMcontratos />
     </section>
 
