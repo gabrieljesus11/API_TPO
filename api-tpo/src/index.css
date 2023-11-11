@@ -12,12 +12,6 @@ body {
   background-color: #fff;
 }
 
-.landing{
-  margin: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .h2{
   color: #505765;
   font-size: 30px;
@@ -80,4 +74,26 @@ body {
   width: 100%;
 }
 
+.PLPhead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.PLP{
+  margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cardsPLP{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 4rem;
+}
 

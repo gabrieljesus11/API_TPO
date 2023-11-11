@@ -37,17 +37,18 @@ export default function MediaCard() {
   const [value, setValue] = React.useState(2);
 
   return (
+    <section>
+    <Card >
+      <div className='cardPDP' sx={{ display:'flex', justifyContent:'center', width: '100%', flexDirection: 'row'}}>
+        <div sx = {{width: '40%'}}>
+          <div className='imagenPDP'>
+            <img src={foto} alt="foto" />
+          </div>
 
-    <div className='cardPDP'>
+          <div className='moduloPDP'>
 
-    <div className='moduloPrincipal'>
-
-      <div className='imagenPDP'>
-        <img src={foto} alt="foto" />
-      </div>
-
-      <div className='moduloInfo'>
-          <div className="tituloPDP">
+          <CardContent>
+              <div className="tituloPDP">
               Curso de Marketing
               </div>
 
@@ -65,84 +66,68 @@ export default function MediaCard() {
             <div className="precioPDP">
               $20.000
             </div>
+          </CardContent>
 
+          <CardActions>
+          
             <div className="botonPrincipalPDP">
               <Link to={"/contratar"} className="linkPrimarioPDP">Contratar</Link>
             </div>
-      </div>
-    </div>
 
+          </CardActions>
 
-
-    <div className='moduloSecundario'>
-
-    <div className='moduloResponsable'>
-    
-      <div className='iconoTitulo'>
-
-        <ListItemIcon>
-        <div className='iconoPDP'>
-          <PersonIcon />
-        </div>
-        </ListItemIcon>
-
-        <div className='titulosPDP'>
-          Responsable: Lucia Vazquez
-        </div>
-      </div>
-
-          <div className='responsableDescripcion'>
-            <div className='tituloUniversitario'>
-              Titulo Universitario: Administración de Empresas
-            </div>
-            <div className='cursosResponsable'>
-              Cursos de Negocios
-            </div>
-            <div className='postgradosResponsable'>
-              Posgrado Marketing
-            </div>
           </div>
+        </div>
+      </div>
+    </Card>
+    <Card>
+              <div>
+        <CardContent>
+          <ListItemButton>
+            <ListItemIcon>
+            <div className='iconoPDP'>
+              <PersonIcon />
+            </div>
+            </ListItemIcon>
+            <div className='subtituloPDP'>
+              Responsable: Lucia Vazquez
+            </div>
+          </ListItemButton>
 
+          <Typography variant="body2" color="text.secondary">
+          <ListItem>Titulo Universitario: Administración de Empresas</ListItem>
+          <ListItem>Cursos de Negocios</ListItem>
+          <ListItem>Posgrado Marketing</ListItem>
+          </Typography>
+        </CardContent>
 
-    </div>
-
-    <div className='moduloDescripcion'>
-
-      <div className='iconoTitulo'>
-
-        <ListItemIcon>
+        <CardContent>
+          <ListItemButton>
+          <ListItemIcon>
           <div className='iconoPDP'>
           <EditNoteIcon />
           </div>
           </ListItemIcon>
-
-          <div className='titulosPDP'>
+          <div className='subtituloPDP'>
           Descripción del curso
           </div>
+          </ListItemButton>
 
-      </div>
 
-          <div className='descripcionCurso'>
+          <Typography variant="body2" color="text.secondary">
           Lorem ipsum dolor sit amet consectetur. Lobortis eget augue sed et. Suspendisse tempus tristique consequat sed imperdiet aliquet condimentum etiam diam.
-            </div>
+          </Typography>
 
-    </div>
-
-    <div className='moduloComentarios'>
-
-    <div className='iconoTitulo'>
-
+          <ListItemButton>
           <ListItemIcon>
           <div className='iconoPDP'>
           <ReviewsIcon />
           </div>
           </ListItemIcon>
-
-          <div className='titulosPDP'>
+          <div className='subtituloPDP'>
           Comentarios
           </div>
-
-    </div>
+          </ListItemButton>
 
           <div className='comentarioPDP'>
           <Rating name="read-only" value={5} readOnly />
@@ -160,15 +145,20 @@ export default function MediaCard() {
           Karina
           </div>
           <div className='descripcionComentarioPDP'>
-          Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.
+          Los temas vistos en el curso fueron interesantes y me aportaron mucho en mi carrera laboral.
           </div>
           </div>
 
-          <div className="botonSecundarioPDP">
-          <div className="linkSecundarioPDP" onClick={handleOpen}>
+          <div>
+
+
+          <div className="botonPrincipalPDP">
+          <div className="linkPrimarioPDP" onClick={handleOpen}>
           Comentar
           </div>
           </div>
+
+
 
           <Modal
           open={open}
@@ -183,8 +173,6 @@ export default function MediaCard() {
           <Typography id="modal-modal-description" sx={{ mt: 2}}>
           Completá tus datos y dejanos tu comentario sobre este curso.
           </Typography>
-
-          <div className='camposForm'>
 
           <TextField
           className='formComentarioPDP'
@@ -217,7 +205,6 @@ export default function MediaCard() {
           }}
           />
           </div>
-          </div>
 
           <div className="botonPrincipalPDP">
           <div className="linkPrimarioPDP" onClick={handleClose}>
@@ -227,19 +214,9 @@ export default function MediaCard() {
 
           </Box>
           </Modal>
-
-
-    </div>
-
-
-    </div>
-
-
-
-
-
-
-    </div>
- 
-    );
+          </div>
+        </CardContent>
+        </div>
+    </Card>
+    </section>);
 }

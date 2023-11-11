@@ -8,55 +8,44 @@
     background-color: #F8F8FB;
 }
 
-.label{
-    font-size: 10px;
-}
-
-.titulo{
-    font-size: 18px;
+.tituloCardHome{
+    font-size: 22px;
     font-style: bold;
     font-weight: 500;
     line-height: 20px;
     color: #333;
-    padding: 8px 0px;
 }
 
-.fecha{
-    font-size: 14px;
+.fechaCardHome{
+    font-size: 15px;
+    font-style: normal;
+    line-height: 20px;
+    color: #5A5A5A;
+}
+
+
+.responsableCardHome{
+    font-size: 16px;
     font-style: normal;
     line-height: 20px;
     color: #333;
-    padding: 4px 0px 8px 0px;
-}
-
-.chip{
-    padding: 0px 0px 4px 0px;
-}
-
-.responsable{
-    font-size: 14px;
-    font-style: normal;
-    line-height: 20px;
-    color: #333;
-    padding: 8px 0px 8px 0px;
     display: flex;
     align-items: center;
 }
 
-.precio{
-    font-size: 16px;
+.precioCardHome{
+    font-size: 22px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
     color: #333;
-    padding: 4px 0px 4px 0px;
 }
 
-.botonPrincipal{
+.botonPrimario{
     border-radius: 6px;
     background: #7F6BB6;
     display: flex;
-    width: 120px;
+    flex-wrap: wrap;
     padding: 10px 30px;
     justify-content: center;
     align-items: center;
@@ -68,7 +57,7 @@
     border: 2px solid #7F6BB6;
     background: #fff;   
     display: flex;
-    width: 120px;
+    flex-wrap: wrap;
     padding: 10px 30px;
     justify-content: center;
     align-items: center;
@@ -92,5 +81,34 @@
     font-weight: 600;
     line-height: 20px;
     
-    
+}
+
+.botonesCardHome{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+    gap: 1rem;
+}
+
+.modulo1Home{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 8px;
+    margin: 1rem 0rem;
+}
+
+.modulo2Home{
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 4px 0px 12px ;
 }

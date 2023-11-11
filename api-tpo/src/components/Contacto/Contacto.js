@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 import Divider from '@mui/material/Divider';
+import './Contacto.css';
 
 export default function FormPropsTextFields() {
   return (
@@ -63,7 +64,7 @@ export default function FormPropsTextFields() {
         />
     </div>
 
-    <div className="bSecundario">
+    <div className="botonContacto">
       <Link to={"/"} className="blink">Enviar solicitud</Link>
     </div>
 

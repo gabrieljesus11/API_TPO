@@ -11,13 +11,17 @@ export default function FormPropsTextFields() {
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '35ch' },
+        '& .MuiTextField-root': { m: 1, width: '60%' },
+        'display':'flex',
+        'justifyContent': 'center',
+        'flexDirection': 'column',
+        'alignItems':'center',
       }}
       noValidate
       autoComplete="off"
     >
 
-    <div>
+<div>
         <TextField
         className='form'
           required
@@ -26,7 +30,7 @@ export default function FormPropsTextFields() {
           defaultValue=""
         />
 
-<TextField
+        <TextField
         className='form'
           required
           id="outlined-required"
@@ -50,22 +54,20 @@ export default function FormPropsTextFields() {
           defaultValue=""
         />
 
-
-<TextField
+        <TextField
         className='form'
-          
-          id="outlined-required"
-          label="Título"
+          required
+          id="outlined"
+          label="Titulo"
           defaultValue=""
         />
 
 <TextField
         className='form'
-          
-          id="outlined-required"
+          required
+          id="outlined"
           label="Experiencia"
           defaultValue=""
-          multiline
         />
 
 <TextField
@@ -88,17 +90,19 @@ export default function FormPropsTextFields() {
         className='form'
           required
           id="outlined-required"
-          label="Repetir contraseña"
+          label="Repetir Contraseña"
           defaultValue=""
         />
 
-
-
-
     </div>
 
-    <div className="bSecundario">
-      <Link to={"/miPerfil"} className="blink">Registrarme</Link>
+    <div className='botonesRegistro'>
+      <div className="botonRegistro">
+        <Link className="linkRegistro">Registrarme</Link>
+      </div>
+      <div className="botonRegistroVolver">
+        <Link to={"/login"} className="linkVolver">Volver</Link>
+      </div>
     </div>
 
     </Box>

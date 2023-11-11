@@ -6,6 +6,17 @@ font-style: normal;
 font-weight: 600;
 line-height: 16px; /* 123.077% */
 text-decoration-line: underline;
+justify-content: flex-end;
+}
+
+.registrarse{
+  margin: 1rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 
@@ -46,7 +57,7 @@ text-decoration-line: underline;
     border: 2px solid #7F6BB6;
     background: #7F6BB6;   
     display: flex;
-    width: 300px;
+    width: 100%;
     padding: 10px 30px;
     justify-content: center;
     align-items: center;
@@ -61,11 +72,13 @@ text-decoration-line: underline;
     border: 2px solid #7F6BB6;
     background: #fff;   
     display: flex;
-    width: 300px;
+    width: 100%;
     padding: 10px 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin: 0rem 0rem 4rem 0rem;
+
 
 }
 

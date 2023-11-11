@@ -1,6 +1,6 @@
 import NavBar from "../components/Navbar/Navbar";
 import * as React from 'react';
-import Card from "../components/Cards/CardsHome/CardHome";
+import Card from "../components/Cards/Cards/CardPLP";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -50,10 +50,10 @@ export default function CursosDisponibles(){
 
     return <div>
     <NavBar />
-    <div className="landing">
+    <div className="PLP">
    
 
-    <Stack direction="row flex justify-between" spacing={2}>
+    <div className="PLPhead">
       <div className="h2">Lista completa de cursos</div>
         <Button startIcon={<FilterListIcon />}>
 
@@ -63,6 +63,7 @@ export default function CursosDisponibles(){
           </div>
           </div>
         <Button/>
+        
 
       
       <Modal
@@ -151,11 +152,10 @@ export default function CursosDisponibles(){
 
 
         </Button>
-    </Stack>
+        </div>
 
     <section 
-    className="xl:grid grid-cols-4 gap-4"
-    > 
+    className="cardsPLP"> 
     <Card />
     <Card />
     <Card />

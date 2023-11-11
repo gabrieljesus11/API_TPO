@@ -16,12 +16,12 @@ font-weight: 600;
 line-height: normal;
   }
 
-  .cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 4rem;
-  }
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 4rem;
+}
   

@@ -1,10 +1,12 @@
 import NavBar from "../components/Navbar/Navbar";
 import FormContacto from "../components/Contacto/Contacto";
+import fondo from "../img/fondoContacto.png";
+
 
 export default function Contacto(){
-    return <div>
+    return <div > 
     <NavBar />
-    <div className="landing">
+    <div className="landing" style={{backgroundImage:`url(${fondo})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" }}>
     
     <section id="contacto-container">
         <div className="h2 contacto-element">
