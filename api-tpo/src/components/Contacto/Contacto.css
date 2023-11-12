@@ -1,12 +1,46 @@
-.botonContacto{
+.linkPrimario{
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.linkSecundario{
+    color: #7F6BB6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+.bPrincipalContacto{
     border-radius: 6px;
     background: #7F6BB6;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
+    margin: 1rem 0rem 1rem 0rem;
     padding: 10px 30px;
-    margin: 4rem;
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.bSecundarioContacto{
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0rem 0rem 4rem 0rem;
+}
+
+.botonesContacto{
+    width: 90%;
 }
