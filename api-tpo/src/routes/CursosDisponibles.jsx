@@ -13,7 +13,7 @@ import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
+import fondo from "../img/fondoContacto.png";
 
 const style = {
   position: 'absolute',
@@ -50,15 +50,15 @@ export default function CursosDisponibles(){
 
     return <div>
     <NavBar />
-    <div className="PLP">
+    <div className="PLP" style={{backgroundImage:`url(${fondo})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" }} >
    
 
     <div className="PLPhead">
       <div className="h2">Lista completa de cursos</div>
         <Button startIcon={<FilterListIcon />}>
 
-          <div className="botonFiltrar">
-          <div className="linkFiltrar" onClick={handleOpen}>
+          <div className="botonFiltro">
+          <div className="linkFiltro" onClick={handleOpen}>
           Filtrar
           </div>
           </div>
@@ -140,8 +140,8 @@ export default function CursosDisponibles(){
       </FormControl>
 
 
-      <div className="botonPrincipal">
-          <div className="linkPrimario" onClick={handleClose}>
+      <div className="botonFiltrar">
+          <div className="linkFiltrar" onClick={handleClose}>
           Filtrar
           </div>
         </div>

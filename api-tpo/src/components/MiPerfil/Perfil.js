@@ -2,8 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Link } from "react-router-dom";
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import './Perfil.css';
 import {UserContext} from '../UserProvider/UserProvider'
 import { useContext } from 'react';
@@ -12,10 +10,13 @@ export default function FormPropsTextFields() {
   const userProvider = useContext(UserContext);
   return (
     <Box
-
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '35ch' },
+        '& .MuiTextField-root': { m: 1, width: '100%' },
+        'display':'flex',
+        'justifyContent': 'center',
+        'flexDirection': 'column',
+        'alignItems':'center',
       }}
       noValidate
       autoComplete="off"
@@ -91,8 +92,13 @@ export default function FormPropsTextFields() {
 
     </div>
 
-    <div className="bSecundario">
-      <Link to={"/"} className="blink">Editar información</Link>
+    <div className='botonesPerfil'>
+      <div className="bPrincipalPerfil">
+        <Link className="linkPrimario">Editar información</Link>
+      </div>
+      <div className="bSecundarioPerfil">
+        <Link to={"/"} className="linkSecundario">Volver</Link>
+      </div>
     </div>
 
     </Box>
