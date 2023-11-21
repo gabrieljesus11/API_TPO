@@ -1,9 +1,21 @@
-.form{
-    background-color: #fff;
-    border-radius: 4px;
+.linkPrimario{
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
 }
 
-.botonRegistro{
+.linkSecundario{
+    color: #7F6BB6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+.bPrincipalContacto{
     border-radius: 6px;
     background: #7F6BB6;
     display: flex;
@@ -16,16 +28,7 @@
     gap: 10px;
 }
 
-.linkRegistro{
-    color: #fff;
-
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-}
-
-.botonRegistroVolver{
+.bSecundarioContacto{
     border-radius: 6px;
     background: #fff;
     display: flex;
@@ -38,14 +41,6 @@
     margin: 0rem 0rem 4rem 0rem;
 }
 
-.linkVolver{
-    color: #7F6BB6;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-}
-
-.botonesRegistro{
-    width: 60%;
+.botonesContacto{
+    width: 90%;
 }

@@ -1,119 +1,201 @@
 .cardPDP{
-    background-color: #F8F8FB;
+    margin:2rem;
 }
 
 .imagenPDP{
-    padding: 0px 0px 12px 0px;
-    max-width: 360px;
+    margin: 4rem;
 }
 
-.titulo{
-    font-size: 24px;
-    font-style: bold;
-    font-weight: 500;
-    line-height: 20px;
-    color: #333;
-}
-
-.dias{
-    color: #7F6BB6;
-    padding: 8px 0px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-}
-
-.modulo{
-    background-color: #fff;
-    padding: 0px 0px 8px 0px;
-}
-
-.fecha{
-    font-size: 14px;
-    font-style: normal;
-    line-height: 20px;
-    color: #333;
-    padding: 4px 0px 8px 0px;
-}
-
-.chip{
-    padding: 4px 0px;
-}
-
-.precio{
-    font-size: 16px;
-    font-style: normal;
-    line-height: 20px;
-    color: #333;
-    padding: 8px 0px;
-}
-
-.botonPrincipal{
-    border-radius: 6px;
-    background: #7F6BB6;
+.moduloPrincipal{
     display: flex;
-    width: 90px;
-    padding: 10px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.linkPrimario{
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-}
-
-.comentario{
-    background-color: #FFF;
-    padding: 8px;
-    margin: 12px 0px;
+.moduloInfo{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+
 }
 
-.tituloComentario{
-    color:#333;
-    font-size: 14px;
+.tituloPDP{
+    color: #333;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.fechaPDP{
+    color: #5A5A5A;
+    font-size: 16spx;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.diasPDP{
+    color: #7F6BB6;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-.descripcionComentario{
+.precioPDP{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
     color: #333;
-    font-size: 13px;
+}
+
+.botonPrincipalPDP{
+    display: flex;
+    padding: 1rem 4rem;
+    margin: 1rem 0rem;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4rem;
+    align-self: stretch;
+    border-radius: 6px;
+    background: #7F6BB6;    
+}
+
+.linkPrimarioPDP{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+}
+
+.iconoTitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    margin: 2rem 0rem;
+    align-items: center;
+}
+
+.iconoPDP{
+    color: #1A77BA;
+}
+
+.titulosPDP{
+color: #333;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+}
+
+.responsableDescripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tituloUniversitario{
+    color: #5A5A5A;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
 }
 
-.icono{
-    color: #1A77BA;
-}
-
-.subtitulo{
-    color:#333;
+.cursosResponsable{
+    color: #5A5A5A;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 125% */
+    line-height: 20px;
 }
 
-.formComentario{
-    padding: 12px 0px;
+.postgradosResponsable{
+    color: #5A5A5A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;  
+}
+
+.descripcionCurso{
+    color: #5A5A5A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 50%;  
+}
+
+.comentarioPDP{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
     flex-wrap: wrap;
-    text-wrap: balance;
-    content: balance;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    margin: 2rem 0rem;
+    background-color: #F3FAFF;
+    width: 50%;
 }
 
-.rating{
-    margin: 12px 0px;
+.tituloComentarioPDP{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0rem 1rem;
+}
+
+.descripcionComentarioPDP{
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0rem 1rem;
+}
+
+.botonSecundarioPDP{
+    display: flex;
+    padding: 1rem 4rem;
+    margin: 1rem 0rem;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4rem;
+    align-self: stretch;
+    border-radius: 6px;
+    background: #FFF;
+    width: 50%; 
+    border-radius: 6px;
+    border: 3px solid #7F6BB6;   
+}
+
+.linkSecundarioPDP{
+    color: #7F6BB6;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+}
+
+.formComentarioPDP{
+    width: 100%;
+}
+
+.camposForm{
+    gap: 1rem;
 }

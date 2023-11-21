@@ -8,10 +8,14 @@ import { Link } from "react-router-dom";
 
 export default function FormPropsTextFields() {
   return (
-    <Box
+<Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '35ch'},
+        '& .MuiTextField-root': { m: 1, width: '90%' },
+        'display':'flex',
+        'justifyContent': 'center',
+        'flexDirection': 'column',
+        'alignItems':'center',
       }}
       noValidate
       autoComplete="off"
@@ -19,7 +23,7 @@ export default function FormPropsTextFields() {
 
     <div>
         <TextField
-          className='form'
+        className='form'
           required
           id="outlined-required"
           label="Nombre"
@@ -27,7 +31,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
-          className='form'
+        className='form'
           required
           id="outlined-required"
           label="Apellido"
@@ -35,7 +39,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
-              className='form'
+        className='form'
           required
           id="outlined-required"
           label="Correo electrónico"
@@ -43,7 +47,7 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
-              className='form'
+        className='form'
           required
           id="outlined-required"
           label="Teléfono"
@@ -51,31 +55,29 @@ export default function FormPropsTextFields() {
         />
 
         <TextField
-              className='form'
-          id="standard-helperText"
+        className='form'
+          required
+          id="outlined"
           label="Horario de referencia"
           defaultValue=""
         />
 
         <TextField
-              className='form'
+        className='form'
           id="outlined-multiline-flexible"
-          label="Interés por el servicio"
+          label="Interés por servicio"
           multiline
           maxRows={4}
         />
-
-
     </div>
 
-    <CardActions>
-      
-    <div className="bSecundario">
-      <Link to={"/pdp"} className="blink">Contratar</Link>
+    <div className="botonContratar">
+      <Link to={"/"} className="blink">Contratar</Link>
     </div>
-
-    </CardActions>
 
     </Box>
+
+
+
   );
 }

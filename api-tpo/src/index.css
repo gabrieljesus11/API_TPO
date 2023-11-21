@@ -12,12 +12,6 @@ body {
   background-color: #fff;
 }
 
-.landing{
-  margin: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .h2{
   color: #505765;
   font-size: 30px;
@@ -80,4 +74,48 @@ body {
   width: 100%;
 }
 
+.PLPhead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
+}
+
+.PLP{
+  margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cardsPLP{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 4rem;
+  margin: 0rem 0rem 4rem 0rem;
+}
+
+.botonFiltrar{
+  border-radius: 6px;
+  background: #7F6BB6;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkFiltrar{
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}

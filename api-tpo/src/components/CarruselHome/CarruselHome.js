@@ -1,7 +1,7 @@
 import React from 'react'
 import './CarruselHome.css';
 import { Carousel } from "@material-tailwind/react";
-import Card from "../../components/Cards/CardsHome/CardHome";
+import Card from "../Cards/Cards/CardHome";
 
 
 function Carrusel() {
@@ -13,6 +13,7 @@ function Carrusel() {
         </div>
 
         <div className='cards'>
+            <Card />
             <Card />
             <Card />
             <Card />

@@ -1,4 +1,12 @@
-.form{
-    background-color: #fff;
-    border-radius: 4px;
+.botonContratar{
+    border-radius: 6px;
+    background: #7F6BB6;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 10px 30px;
+    margin: 4rem;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

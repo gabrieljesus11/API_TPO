@@ -76,20 +76,21 @@ const renderForm = (
         }}
       />
       {renderErrorMessage(errorMessages.name)}
+    </div>
 
-      <div className='olvideContrasena'>
+    <div className='olvideContrasena'>
         <Link to={"/recuperoContrasena"} className='recupero'>Olvidé mi contraseña</Link>
       </div>
-    </div>
 
-    <CardActions>
-    <div className='registro'>
-      ¿No eres miembro?
+
+    <div className='registrarse'>
+      <div className='registro'>
+        ¿No eres miembro?
+      </div>
+      <div className='registro2'>
+        <Link to={"/Registro"} className="registro2">Registrate acá</Link>
+      </div>
     </div>
-    <div className='registro2'>
-      <Link to={"/Registro"} className="registro2">Registrate acá</Link>
-    </div>
-    </CardActions>
 
  
     <div className='botonesLogin'>
