@@ -43,9 +43,9 @@ class ABMcursos extends React.Component{
         },
       };
 
-    mostrarModalActualizar = (dato) => {
+    mostrarModalActualizar = (elemento) => {
         this.setState({
-          form: dato,
+          form: elemento,
           modalActualizar: true,
         });
       };
@@ -64,26 +64,26 @@ class ABMcursos extends React.Component{
         this.setState({ modalInsertar: false });
       };
     
-      editar = (dato) => {
+      editar = (elemento) => {
         var contador = 0;
         var arreglo = this.state.data;
         arreglo.map((registro) => {
-          if (dato.id === registro.id) {
-            arreglo[contador].personaje = dato.personaje;
-            arreglo[contador].anime = dato.anime;
+          if (elemento.id === registro.id) {
+            arreglo[contador].personaje = elemento.personaje;
+            arreglo[contador].anime = elemento.anime;
           }
           contador++;
         });
         this.setState({ data: arreglo, modalActualizar: false });
       };
     
-      eliminar = (dato) => {
-        var opcion = window.confirm("Estás Seguro que deseas Eliminar el elemento "+dato.id);
+      eliminar = (elemento) => {
+        var opcion = window.confirm("Estás Seguro que deseas Eliminar el elemento "+elemento.id);
         if (opcion === true) {
           var contador = 0;
           var arreglo = this.state.data;
           arreglo.map((registro) => {
-            if (dato.id === registro.id) {
+            if (elemento.id === registro.id) {
               arreglo.splice(contador, 1);
             }
             contador++;
@@ -118,8 +118,7 @@ class ABMcursos extends React.Component{
             <br />
             <br />
 
-            <Table>
-
+            <Table responsive striped bordered hover>
             <thread>
                 <tr>
                     <th>id</th>
