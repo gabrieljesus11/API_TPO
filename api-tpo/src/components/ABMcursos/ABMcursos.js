@@ -151,6 +151,10 @@ class ABMcursos extends React.Component{
 
             </Container>
 
+            <br />
+            <br />
+            <br />
+
             <Modal isOpen={this.state.modalActualizar}>
           <ModalHeader>
            <div><h3>Modificar</h3></div>
