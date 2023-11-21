@@ -20,6 +20,7 @@ import EditNoteIcon from '@mui/icons-material/EditNote';
 import './SideMenu.css';
 import {UserContext} from '../UserProvider/UserProvider'
 import {useContext } from 'react';
+import SchoolIcon from '@mui/icons-material/School';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -152,7 +153,7 @@ export default function TemporaryDrawer() {
           <ListItem disablePadding>
             <ListItemButton to={"/abmcursos"}>
               <ListItemIcon>
-                <ClassIcon />
+                <SchoolIcon />
               </ListItemIcon>
               Gestionar Cursos
             </ListItemButton>

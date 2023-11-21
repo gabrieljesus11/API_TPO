@@ -17,6 +17,7 @@ import Switch from '@mui/material/Switch';
 
 
 
+
 const data = [
     {id: 1, curso: 'Marketing', duracion: 25, frecuencia: 3, precio: 40000},
     {id: 2, curso: 'Diseño UX', duracion: 30, frecuencia: 2, precio: 50000},
