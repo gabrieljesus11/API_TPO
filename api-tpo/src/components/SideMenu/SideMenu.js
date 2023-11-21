@@ -149,6 +149,14 @@ export default function TemporaryDrawer() {
               Cursos Disponibles
             </ListItemButton>
           </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton to={"/abmcursos"}>
+              <ListItemIcon>
+                <ClassIcon />
+              </ListItemIcon>
+              Gestionar Cursos
+            </ListItemButton>
+          </ListItem>
           <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
             <ListItemButton to={"/abmcontratos"}>
               <ListItemIcon>
