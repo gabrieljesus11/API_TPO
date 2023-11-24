@@ -1,13 +1,64 @@
-.cardComentario{
-    border-radius: 4px;
-    background: #F8F8FB;
-    box-shadow: 2px 2px 2px 0px rgba(173, 173, 173, 0.25);
-    display: flex;
-    padding: 16px 19px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    align-self: stretch;
-    width: 400px;
-    margin: 12px 0px;
+    .bPrimarioComentarios{
+        border-radius: 6px;
+        background: #7F6BB6;
+        display: flex;
+        width: 200px;
+        padding: 10px 31px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    
+    }
+    
+    .bSecundarioComentarios{
+        border-radius: 6px;
+        border: 2px solid #7F6BB6;
+        background: #FFF;
+        display: flex;
+        width: 200px;
+        padding: 10px 31px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+    
+    
+    .linkSecundarioComentarios{
+        color: #7F6BB6;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+    
+    .linkPrimarioComentarios{
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .botonesContratacion{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        padding: 4px;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .cardComentario{
+        border-radius: 4px;
+        background: #F8F8FB;
+        box-shadow: 2px 2px 2px 0px rgba(173, 173, 173, 0.25);
+        display: flex;
+        padding: 16px 19px;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        width: 35rem;
+        margin: 12px 0px;
     }

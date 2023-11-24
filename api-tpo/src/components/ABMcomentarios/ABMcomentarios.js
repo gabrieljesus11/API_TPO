@@ -57,7 +57,7 @@ export default function AlignItemsList() {
   return (
     <div>
       {foo}
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <List sx={{ width: '100%', maxWidth: 360}}>
       <div className="chip">
         <Chip label="Curso Marketing" color="primary" />
       </div>
@@ -81,12 +81,17 @@ export default function AlignItemsList() {
         </Typography>
         <CardActions>
 
-        <div className="botonPrincipal">
-          <Link onClick={handleAceptar} className="linkPrimario">Aceptar</Link>
+        <div className='botonesContratacion'>
+
+
+        <div className="bPrimarioComentarios">
+          <Link onClick={handleAceptar} className="linkPrimarioComentarios">Aceptar</Link>
         </div>
 
-        <div className="botonSecundario">
-          <Link onClick={handleBloquear} className="linkSecundario">Bloquear</Link>
+        <div className="bSecundarioComentarios">
+          <Link onClick={handleBloquear} className="linkSecundarioComentarios">Bloquear</Link>
+        </div>
+
         </div>
 
         </CardActions>
@@ -120,12 +125,16 @@ export default function AlignItemsList() {
 
               <CardActions>
 
-              <div className="botonPrincipal">
-                <Link to={"/"} className="linkPrimario">Aceptar</Link>
+              <div className='botonesContratacion'>
+
+              <div className="bPrimarioComentarios">
+                <Link to={"/"} className="linkPrimarioComentarios">Aceptar</Link>
             </div>
 
-            <div className="botonSecundario">
-                <Link onClick={handleBloquear} className="linkSecundario">Bloquear</Link>
+            <div className="bSecundarioComentarios">
+                <Link onClick={handleBloquear} className="linkSecundarioComentarios">Bloquear</Link>
+            </div>
+
             </div>
 
             </CardActions>
@@ -157,12 +166,16 @@ export default function AlignItemsList() {
 
               <CardActions>
 
-            <div className="botonPrincipal">
-              <Link to={"/"} className="linkPrimario">Aceptar</Link>
+              <div className='botonesContratacion'>
+
+            <div className="bPrimarioComentarios">
+              <Link to={"/"} className="linkPrimarioComentarios">Aceptar</Link>
             </div>
 
-            <div className="botonSecundario">
-              <Link to={"/"} className="linkSecundario">Bloquear</Link>
+            <div className="bSecundarioComentarios">
+              <Link to={"/"} className="linkSecundarioComentarios">Bloquear</Link>
+            </div>
+
             </div>
 
 </CardActions>
@@ -197,12 +210,16 @@ export default function AlignItemsList() {
               </Typography>
               <CardActions>
 
-                <div className="botonPrincipal">
-                  <Link to={"/"} className="linkPrimario">Aceptar</Link>
+              <div className='botonesContratacion'>
+
+                <div className="bPrimarioComentarios">
+                  <Link to={"/"} className="linkPrimarioComentarios">Aceptar</Link>
                 </div>
 
-                <div className="botonSecundario">
-                  <Link to={"/"} className="linkSecundario">Bloquear</Link>
+                <div className="bSecundarioComentarios">
+                  <Link to={"/"} className="linkSecundarioComentarios">Bloquear</Link>
+                </div>
+
                 </div>
 
             </CardActions>
