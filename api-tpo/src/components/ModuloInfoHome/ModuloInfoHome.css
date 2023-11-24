@@ -1,0 +1,41 @@
+.moduloTextoInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    margin: 2rem 0rem;
+    background-color: #F3FAFF;
+    width: 50%;
+}
+
+.tituloInfo{
+    color: #333;
+    font-size: 32px;
+    font-style: normal;
+    text-align: start;
+    font-weight: 500;
+    padding: 1rem 1rem;
+}
+
+.descripcionInfo{
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    text-align: start;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 1rem 1rem;
+    line-height:150%;
+}
+
+.moduloInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 2rem;
+    gap: 6rem;
+}
