@@ -3,10 +3,18 @@
     background: #7F6BB6;
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 90%;
     padding: 10px 30px;
     margin: 4rem;
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.linkContratar{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
 }
