@@ -7,7 +7,7 @@ import infoImagen from "../../img/info.png";
 export default function InsetDividers() {
   return (
 
-    <div className='moduloInfo'>
+    <div className='moduloI'>
         <div className='moduloTextoInfo'>
             <div className='tituloInfo'>
             Calidad academica con Education HUB

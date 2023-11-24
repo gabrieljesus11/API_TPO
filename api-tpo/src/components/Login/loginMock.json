@@ -1,3 +1,4 @@
+
 {
     "database": [
         {"usuario":"usuario@mail.com",
@@ -15,7 +16,7 @@
         "telefono": "+54XXXXXXXX",
         "titulo": "Estudiate de Licenciatura en Gestión de IT",
         "experiencia": "Diseño UX/UI",
-        "imageSource": "../../img/agus.png"},
+        "imageSource": "../../img/perfilDocente.png"},
         {"usuario":"gabi@mail.com",
         "password":"gabi",
         "nombre": "Gabriel ",
@@ -23,7 +24,7 @@
         "telefono": "+54XXXXXXXX",
         "titulo": "Estudiante de Ingeniería Informática",
         "experiencia": "Desarrollo Backend, QA Manual, QA Automatizado",
-        "imageSource": "../../img/gabi.png"}
+        "imageSource": "../../img/perfilDocente2.png"}
     ],
 
     "errors": {

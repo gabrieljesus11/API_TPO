@@ -8,7 +8,17 @@
     padding: 1rem 0rem;
     margin: 2rem 0rem;
     background-color: #F3FAFF;
-    width: 50%;
+    width: 40%;
+}
+
+.moduloI{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 2rem;
+    gap: 4rem;
 }
 
 .tituloInfo{
@@ -22,7 +32,7 @@
 
 .descripcionInfo{
     color: #333;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     text-align: start;
     font-weight: 400;
@@ -31,11 +41,3 @@
     line-height:150%;
 }
 
-.moduloInfo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 8rem 2rem;
-    gap: 6rem;
-}
