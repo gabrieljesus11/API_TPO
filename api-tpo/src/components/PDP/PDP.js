@@ -35,13 +35,13 @@ export default function MediaCard() {
 
     <div className='cardPDP'>
 
-    <div className='moduloPrincipal'>
+    <div className='moduloPrincipalPDP'>
 
       <div className='imagenPDP'>
         <img src={foto} alt="foto" />
       </div>
 
-      <div className='moduloInfo'>
+      <div className='moduloInfoPDP'>
           <div className="tituloPDP">
               Curso de Marketing
               </div>
