@@ -72,7 +72,7 @@ export default function FormPropsTextFields() {
     </div>
 
     <div className="botonContratar">
-      <Link to={"/"} className="blink">Contratar</Link>
+      <Link to={"/"} className="linkContratar">Contratar</Link>
     </div>
 
     </Box>

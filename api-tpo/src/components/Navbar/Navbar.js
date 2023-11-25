@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,9 +11,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { IconButton, Typography } from '@mui/material';
 import { Link } from "react-router-dom";
-import EmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import {UserContext} from '../UserProvider/UserProvider'
 import { useState, useContext } from 'react';
+import imgDocente from '../../img/perfilDocente.png';
 
 export default function NavBar(){
   const userProvider = useContext(UserContext);
@@ -28,9 +27,9 @@ export default function NavBar(){
   }
 
   const settings = userProvider.user != null ? 
-  [<Link to={"/miPerfil"}>Mi Perfil</Link>, 
-  <Link to={"/"} onClick={handleLogOut}>Cerrar Sesión</Link>]:
-  [<Link to={"/login"}>Ingresar</Link>];
+  [<Link to={"/miPerfil"} className='miPerfil'>Mi Perfil</Link>, 
+  <Link to={"/"} className='cerrarSesion' onClick={handleLogOut}>Cerrar Sesión</Link>]:
+  [<Link to={"/login"} className='ingresar'>Ingresar</Link>];
   
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -65,8 +64,11 @@ export default function NavBar(){
               </IconButton>              
               <IconButton onClick={handleOpenUserMenu} sx={{display: userIsLogged ? 'default' : 'none'}}>
               <Avatar alt='Usuario' imgProps={{}} > 
-                <img src={handleAvatarIcon}/>
+                <img src={handleAvatarIcon} alt=""/>
               </Avatar>
+
+              <Avatar alt="perfil" src='../../img/perfilDocente.png' />
+              
               </IconButton>
               <Menu
                 sx={{ mt: '45px' }}

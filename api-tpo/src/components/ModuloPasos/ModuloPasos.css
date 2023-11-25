@@ -1,6 +1,6 @@
 .tituloPasos{
     color: #333;
-    text-align:start;
+    text-align: start;
     padding: 16px 8px;
     font-size: 30px;
     font-style: normal;
@@ -20,7 +20,7 @@
     flex-direction: row;
     align-items: center;
     margin: 2rem;
-    justify-content:baseline;
+    justify-content: baseline;
     gap: 6rem;
 }
 

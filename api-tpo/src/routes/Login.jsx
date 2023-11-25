@@ -1,6 +1,6 @@
 import ModuloLogin from "../components/Login/Login";
 import NavBar from "../components/Navbar/Navbar";
-import fondo from "../img/fondoContacto.png";
+import fondo from "../img/fondoLogin.png";
 
 
 export default function Login(){
