@@ -10,6 +10,15 @@ justify-content: flex-end;
 margin: 0rem 0rem 2rem 0rem;
 }
 
+.btn-custom {
+  background-color: violet;
+  color: #fff;
+}
+
+.recupero{
+  color: #333;
+}
+
 .registrarse{
   margin: 1rem 0rem;
   width: 100%;
