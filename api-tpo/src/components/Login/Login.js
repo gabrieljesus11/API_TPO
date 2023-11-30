@@ -3,49 +3,93 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, RouterProvider, redirect, useNavigate } from "react-router-dom";
 import './Login.css'
 import { CardContent } from '@mui/material';
 import { useState, useContext } from 'react';
 import loginMock from './loginMock.json'
 import { BrowserRouter as Router, Switch, 
-  Route, Redirect, withRouter } from "react-router-dom";
+  Route, redirectDocument, withRouter } from "react-router-dom";
 import {UserContext} from '../UserProvider/UserProvider'
+import {TokenContext} from '../TokenProvider/TokenProvider';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 
 export default function Login() {
+async function login(url, data = {}){
+  const response = await fetch(url, {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers:{
+      'Content-Type' : 'application/json',
+      'Access-Control-Allow-Origin' : 'http://localhost:4000'
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data),
+  })
+  return response;
+}
 
 const [userName, setUserName] = useState('')
 const [password, setPassword] = useState('')
 const navigate = useNavigate()
-const [errorMessages, setErrorMessages] = useState({});
+const [openSuccess, setOpenSuccess] = useState(false);
+const [openError, setOpenError] = useState(false);
+const [errorMessage, setErrorMessage] = useState('');
+const [iniciado, setIniciado] = useState(false);
 const [isSubmitted, setIsSubmitted] = useState(false);
 const UserProvider = useContext(UserContext)
+const TokenProvider = useContext(TokenContext);
+
+
+const handleClose = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+}
+  setOpenSuccess(false);
+  setOpenError(false);
+};
+const handleRedirection = async () =>{
+  await new Promise( resolve => setTimeout(resolve, 6000));
+  navigate('/')
+}
 const handleSubmit = (event) =>{
   event.preventDefault();
-
-  const userData = loginMock.database.find((user) => user.usuario === userName);
+  const body = {
+    "email": userName,
+    "password": password
+  } 
   
-  if(userData){
-    if(userData.password !== password){
-      setErrorMessages({"name" : "password", message: loginMock.errors.password})
+  const loginResponse = login('http://localhost:4000/api/users/login', body)
+  .then(response => {
+    if(response.ok){
+      setIsSubmitted(true);
+      setOpenSuccess(true)
     }
     else{
-      setIsSubmitted(true);
-      UserProvider.setUser(userData)
-      navigate('/')
+      console.log(response)
     }
-  }
-  else{
-    setErrorMessages({name: "username", message: loginMock.errors.username})
-  }
+    return response.json();
+  })
+  .then(data =>{
+    console.log(data)
+    if(data.loginUser != undefined){
+      UserProvider.setUser(data.loginUser.user)
+      TokenProvider.setToken(data.loginUser.token)
+      handleRedirection()
+    }
+    else{
+      setErrorMessage(data.message)
+      setOpenError(true)
+    }
+  })
+  .catch(error => {
+    console.log("Error: ", error)
+  }); 
 
-
-}
-
-// Generate JSX code for error message
-const renderErrorMessage = (name) =>{
-  if(name === errorMessages.name){ 
-    return (<div className="error">{errorMessages.message}</div>);}
 }
 
 const renderForm = (
@@ -75,7 +119,6 @@ const renderForm = (
           setPassword(event.target.value);
         }}
       />
-      {renderErrorMessage(errorMessages.name)}
     </div>
 
     <div className='olvideContrasena'>
@@ -103,7 +146,16 @@ const renderForm = (
     </div>
 
 
-    
+    <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+          Se inició sesión correctamente
+        </Alert>
+    </Snackbar>
+    <Snackbar open={openError} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+          Ha ocurrido un error: {errorMessage}
+        </Alert>
+    </Snackbar>
   </div>
 
 );
