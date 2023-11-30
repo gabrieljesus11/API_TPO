@@ -8,7 +8,7 @@
     padding: 1rem 0rem;
     margin: 2rem 0rem;
     background-color: #F3FAFF;
-    width: 40%;
+    width: 70%;
 }
 
 .moduloI{
@@ -17,8 +17,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 8rem 2rem;
+    margin: 4rem 2rem;
     gap: 4rem;
+    width: 100%;
 }
 
 .tituloInfo{
@@ -39,5 +40,6 @@
     line-height: 20px;
     padding: 1rem 1rem;
     line-height:150%;
+    width: 90%;
 }
 

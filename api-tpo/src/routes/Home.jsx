@@ -8,7 +8,7 @@ import ModuloInfoHome from "../components/ModuloInfoHome/ModuloInfoHome";
 
 
 export default function Home(){
-    return <div className="sm:w-full">
+    return <div className="">
     <section>
         <NavBar/>
     </section>

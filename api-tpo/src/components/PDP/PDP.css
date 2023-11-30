@@ -149,7 +149,7 @@ line-height: 20px; /* 142.857% */
     padding: 1rem 0rem;
     margin: 2rem 0rem;
     background-color: #F3FAFF;
-    width: 50%;
+    width: 80%;
 }
 
 .tituloComentarioPDP{
@@ -180,7 +180,7 @@ line-height: 20px; /* 142.857% */
     align-self: stretch;
     border-radius: 6px;
     background: #FFF;
-    width: 50%; 
+    width: 80%; 
     border-radius: 6px;
     border: 3px solid #7F6BB6;   
 }
