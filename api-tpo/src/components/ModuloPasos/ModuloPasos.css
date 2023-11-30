@@ -17,31 +17,23 @@
 
 .paso{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     margin: 2rem;
-    justify-content: baseline;
-    gap: 6rem;
-}
-
-.moduloPaso{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: baseline;
-    gap: 6rem;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
 }
 
 .textoPasos{
-    display: flex;
     flex-direction: column;
     justify-content: baseline;
     align-items: baseline;
     flex-wrap: wrap;
-    gap: 1rem;
     padding: 1rem 0rem;
     margin: 2rem 0rem;
-    width: 80%;
+    width: 60%;
 }
 
 .tituloPaso{
@@ -51,7 +43,7 @@
     text-align: start;
     font-weight: 500;
     line-height: 32px;
-    padding: 0rem 1rem;
+    padding: 1rem;
 }
 
 .descripcionPaso{

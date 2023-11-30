@@ -22,7 +22,7 @@ export default function InsetDividers() {
 
   <div className='paso' align="center">
   <img src={i1} alt="foto" class= "foto"/>
-  <div className='moduloPaso'>
+  
   <img src={paso1} alt="foto" class= "foto"/>
   <div className='textoPasos'>
   <div className='tituloPaso'>
@@ -31,14 +31,13 @@ export default function InsetDividers() {
         <div className='descripcionPaso'>
         Todos los cursos son de acceso gratis para que puedas aprender desde cualquier lugar del mundo utilizando un dispositivo conectado a internet.
         </div>
-  </div>
+
   </div>
   </div>
 
 
   <div className='paso' align="center">
   <img src={i2} alt="foto" class= "foto"/>
-  <div className='moduloPaso'>
   <img src={paso2} alt="foto" class= "foto"/>
   <div className='textoPasos'>
   <div className='tituloPaso'>
@@ -49,11 +48,9 @@ export default function InsetDividers() {
         </div>
   </div>
   </div>
-  </div>
   
   <div className='paso' align="center">
   <img src={i3} alt="foto" class= "foto"/>
-  <div className='moduloPaso'>
   <img src={paso3} alt="foto" class= "foto"/>
   <div className='textoPasos'>
   <div className='tituloPaso'>
@@ -64,11 +61,9 @@ export default function InsetDividers() {
         </div>
   </div>
   </div>
-  </div>
 
   <div className='paso' align="center">
   <img src={i4} alt="foto" class= "foto"/>
-  <div className='moduloPaso'>
   <img src={paso4} alt="foto" class= "foto"/>
   <div className='textoPasos'>
   <div className='tituloPaso'>
@@ -76,7 +71,6 @@ export default function InsetDividers() {
         </div>
         <div className='descripcionPaso'>
         Los cursos gratis también incluyen la opción de obtener un certificado de estudios verificable a nivel internacional, por un precio ajustado a tu país.        </div>
-  </div>
   </div>
   </div>
   

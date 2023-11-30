@@ -164,7 +164,6 @@ export default function CursosDisponibles(){
     <Card />
     <Card />
     <Card />
-    <Card />
     </section>
 
     </div>
