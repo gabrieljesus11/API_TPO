@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 import './CardPLP.css';
 
 
-export default function MediaCard() {
+export default function CardPLP(props) {
+
+  const {titulo, fecha, duracion, responsable, precio} = props;
+
   return (
     <div className='cardPLP'>
       <Card>
@@ -15,17 +18,17 @@ export default function MediaCard() {
       <div className="card">
         
         <div className="tituloCard">
-          Curso de Marketing
+          {titulo}
         </div>
 
         <div className='modulo1'>
 
         <div className="fechaCard">
-          Empieza el 09/10/2023
+          Empieza el {fecha}
         </div>
 
         <div className="chipCard">
-          <Chip label="Duración 3 meses" color="primary" />
+          <Chip label={duracion} color="primary" />
         </div>
 
         </div>
@@ -34,11 +37,11 @@ export default function MediaCard() {
 
         <div className="responsableCard">
           <PersonIcon />
-          Responsable: Lucia Vazquez
+          Responsable: {responsable}
         </div>
 
         <div className="precioCard">
-          $20.000
+          $ {precio}
         </div>
 
         </div>

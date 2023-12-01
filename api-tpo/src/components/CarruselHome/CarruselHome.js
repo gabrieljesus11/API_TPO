@@ -1,8 +1,7 @@
 import React from 'react'
 import './CarruselHome.css';
-import { Carousel } from "@material-tailwind/react";
-import Card from "../Cards/Cards/CardHome";
-
+import CardHome from "../Cards/Cards/CardHome"
+import Card from '@mui/material/Card';
 
 function Carrusel() {
   return (
@@ -13,11 +12,20 @@ function Carrusel() {
         </div>
 
         <div className='cards'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </div>
+
+        console.log(cardsData)
+    
+      {CardHome.map((card, index) => (
+        <Card
+          key={index}
+          titulo={card.titulo}
+          fecha={card.fecha}
+          duracion={card.duracion}
+          responsable={card.responsable}
+          precio={card.precio}
+        />
+      ))}
+    </div>
 
     </div>
 

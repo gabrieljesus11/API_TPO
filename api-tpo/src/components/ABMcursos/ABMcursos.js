@@ -115,7 +115,7 @@ class ABMcursos extends React.Component{
             <>
             <Container>
             <br />
-            <Button color="info" onClick={()=>this.mostrarModalInsertar()}>Agregar nuevo curso</Button>
+            <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Agregar nuevo curso</Button>
             <br />
             <br />
 

@@ -1,6 +1,6 @@
 import NavBar from "../components/Navbar/Navbar";
 import * as React from 'react';
-import Card from "../components/Cards/Cards/CardPLP";
+import CardPLP from "../components/Cards/Cards/CardPLP";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -154,16 +154,8 @@ export default function CursosDisponibles(){
         </Button>
         </div>
 
-    <section 
-    className="cardsPLP"> 
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <section className="cardsPLP"> 
+    <CardPLP titulo="Curso de Marketing" fecha="02/10/2023" duracion="3 meses" responsable="Lucía Vazquez" precio= {20000} />
     </section>
 
     </div>
