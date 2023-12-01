@@ -3,6 +3,17 @@ import FormContratar from "../components/FormContratar/Form";
 import fondo from "../img/fondoContacto.png";
 
 export default function Contratar(){
+
+    const contract = [
+        {
+          nombre: "Camila Fernandez",
+          curso: "Cerámica",
+          teléfono: "+54 1232 1232",
+          mail: "cfernandez@mail.com",
+          comentario: "me interesa participar del curso"
+        }
+      ]
+
     return <div>
     <NavBar />
     <div className="landing" style={{backgroundImage:`url(${fondo})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" }}>
@@ -14,6 +25,20 @@ export default function Contratar(){
         </div>
     
         <div className="contacto-element">
+
+    
+        {contract.map((contrato, index) => (
+        <FormContratar
+          key={index}
+          nombre={contrato.nombre}
+          curso={contrato.curso}
+          teléfono={contrato.teléfono}
+          mail={contrato.mail}
+          comentario={contrato.comentario}
+        />
+      ))}
+    
+
             <FormContratar />
         </div>
     </section>

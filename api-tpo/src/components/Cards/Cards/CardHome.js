@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 import './CardHome.css';
 
 
-export default function MediaCard() {
+function CardHome(props) {
+
+  const {titulo, fecha, duracion, responsable, precio} = props;
+
   return (
     <div className='cardHome'>
       <Card>
@@ -15,17 +18,17 @@ export default function MediaCard() {
       <div className="card">
         
         <div className="tituloCardHome">
-          Curso de Marketing
+          {titulo}
         </div>
 
         <div className='modulo1Home'>
 
         <div className="fechaCardHome">
-          Empieza el 09/10/2023
+          Empieza el {fecha}
         </div>
 
         <div className="chipCardHome">
-          <Chip label="Duración 3 meses" color="primary" />
+          <Chip label={duracion} color="primary" />
         </div>
 
         </div>
@@ -34,11 +37,11 @@ export default function MediaCard() {
 
         <div className="responsableCardHome">
           <PersonIcon />
-          Responsable: Lucia Vazquez
+          Responsable: {responsable}
         </div>
 
         <div className="precioCardHome">
-          $30.000
+        $ {precio}
         </div>
 
         </div>
@@ -64,3 +67,5 @@ export default function MediaCard() {
 
   );
 }
+
+export default CardHome;

@@ -1,6 +1,6 @@
 import NavBar from "../components/Navbar/Navbar";
 import * as React from 'react';
-import Card from "../components/Cards/Cards/CardPLP";
+import CardPLP from "../components/Cards/Cards/CardPLP";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -46,6 +46,7 @@ export default function CursosDisponibles(){
       [event.target.name]: event.target.checked,
     });
   };
+
 
   const [courses, setCourses] = useState([]);
   const [coursesFetched, setCoursesFetched] = useState(false);
@@ -93,8 +94,6 @@ export default function CursosDisponibles(){
     }
     
   },[coursesFetched])
-  
-  
 
   const { mkt, diseno, it, ind, gru, uni, sem, men} = state;
 
@@ -204,16 +203,21 @@ export default function CursosDisponibles(){
         </Button>
         </div>
 
-    <section 
-    className="cardsPLP"> 
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <section className="cardsPLP"> 
+  
+    
+    {courses.map((card, index) => (
+        <CardPLP
+          key={index}
+          titulo={card.titulo}
+          fecha={card.fecha}
+          duracion={card.duracion}
+          responsable={card.responsable}
+          precio={card.precio}
+        />
+      ))}
+    
+    
     </section>
 
     </div>
