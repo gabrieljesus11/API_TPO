@@ -53,7 +53,7 @@ const handleClose = (event, reason) => {
   setOpenError(false);
 };
 const handleRedirection = async () =>{
-  await new Promise( resolve => setTimeout(resolve, 6000));
+  await new Promise( resolve => setTimeout(resolve, 1000));
   navigate('/')
 }
 const handleSubmit = (event) =>{
