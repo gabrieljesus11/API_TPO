@@ -200,7 +200,7 @@ export default function FormPropsTextFields() {
     </div>
     <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Se inició sesión correctamente
+          Se editó el usuario correctamente
         </Alert>
     </Snackbar>
     <Snackbar open={openError} autoHideDuration={5000} onClose={handleClose}>
