@@ -46,6 +46,17 @@ export default function CursosDisponibles(){
     });
   };
 
+  
+  const courses = [
+    {
+      titulo: "Curso de Marketing",
+      fecha: "02/10/2023",
+      duracion: "3 meses",
+      responsable: "Lucía Vazquez",
+      precio: 20000
+    }
+  ]
+
   const { mkt, diseno, it, ind, gru, uni, sem, men} = state;
 
     return <div>
@@ -155,7 +166,20 @@ export default function CursosDisponibles(){
         </div>
 
     <section className="cardsPLP"> 
-    <CardPLP titulo="Curso de Marketing" fecha="02/10/2023" duracion="3 meses" responsable="Lucía Vazquez" precio= {20000} />
+  
+    
+    {courses.map((card, index) => (
+        <CardPLP
+          key={index}
+          titulo={card.titulo}
+          fecha={card.fecha}
+          duracion={card.duracion}
+          responsable={card.responsable}
+          precio={card.precio}
+        />
+      ))}
+    
+    
     </section>
 
     </div>
