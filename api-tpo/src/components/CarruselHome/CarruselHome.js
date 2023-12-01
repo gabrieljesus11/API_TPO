@@ -4,6 +4,17 @@ import CardHome from "../Cards/Cards/CardHome"
 import Card from '@mui/material/Card';
 
 function Carrusel() {
+
+  const courses = [
+    {
+      titulo: "Curso de Marketing",
+      fecha: "02/10/2023",
+      duracion: "3 meses",
+      responsable: "Lucía Vazquez",
+      precio: 20000
+    }
+  ]
+
   return (
 
     <div className='carruselHome'>
@@ -13,10 +24,9 @@ function Carrusel() {
 
         <div className='cards'>
 
-        console.log(cardsData)
     
-      {CardHome.map((card, index) => (
-        <Card
+      {courses.map((card, index) => (
+        <CardHome
           key={index}
           titulo={card.titulo}
           fecha={card.fecha}
