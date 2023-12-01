@@ -119,11 +119,11 @@ export default function TemporaryDrawer() {
       <List>
 
       <ListItem disablePadding>
-            <ListItemButton to={"../"}>
+            <ListItemButton>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              Inicio
+              <Link to={"../"}>Inicio</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
@@ -135,43 +135,43 @@ export default function TemporaryDrawer() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
-            <ListItemButton to={"/abmcomentarios"}>
+            <ListItemButton>
               <ListItemIcon>
                 <RateReviewIcon />
               </ListItemIcon>
-              Comentarios
+              <Link to={"/abmcomentarios"}>Comentarios</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton to={"/cursosDisponibles"}>
+            <ListItemButton>
               <ListItemIcon>
                 <ClassIcon />
               </ListItemIcon>
-              Cursos Disponibles
+              <Link to={"/cursosDisponibles"}>Cursos Disponibles</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
-            <ListItemButton to={"/abmcursos"}>
+            <ListItemButton>
               <ListItemIcon>
                 <SchoolIcon />
               </ListItemIcon>
-              Gestionar Cursos
+              <Link  to={"/abmcursos"}>Gestionar Cursos</Link>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding sx={{display: UserProvider.user != null ? 'contents' : 'none'}}>
-            <ListItemButton to={"/abmcontratos"}>
+            <ListItemButton>
               <ListItemIcon>
                 <EditNoteIcon />
               </ListItemIcon>
-              Contratos
+              <Link to={"/abmcontratos"}>Contratos</Link> 
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton to={"/contacto"}>
+            <ListItemButton >
               <ListItemIcon>
                 <CallIcon />
               </ListItemIcon>
-              Contacto
+            <Link to={"/contacto"}>Contacto</Link>
             </ListItemButton>
           </ListItem>
         </List>

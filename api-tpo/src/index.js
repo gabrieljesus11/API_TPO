@@ -16,9 +16,8 @@ import Recupero from "./routes/Recupero";
 import ABMcomentarios from "./routes/ABMcomentarios";
 import ABMcontratos from "./routes/ABMcontratos";
 import ABMcursos from "./routes/ABMcursos";
-import { AuthProvider } from './auth/AuthProvider';
-import App from './App';
 import UserProvider from "./components/UserProvider/UserProvider"
+import TokenProvider from "./components/TokenProvider/TokenProvider"
 
 
 const router = createBrowserRouter([
@@ -98,9 +97,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
+    <TokenProvider>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </TokenProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
