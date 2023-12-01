@@ -15,7 +15,7 @@ import { useState } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import {UserContext} from '../UserProvider/UserProvider'
-import {useContext } from 'react';
+import {useContext, useEffect } from 'react';
 
 export default function AlignItemsList() {
   const UserProvider = useContext(UserContext)
@@ -23,10 +23,6 @@ export default function AlignItemsList() {
   const [blockCard, setBlockCard] = useState(true)
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
-
-  const foo = ()=>{
-    
-  }
   
   const handleAceptar = (event)=>{
     event.preventDefault();
@@ -39,24 +35,57 @@ export default function AlignItemsList() {
     setOpenError(true)
   }
 
-  const handleCloseSuccess = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
+  const [comments, setComments] = useState([]);
+  const [commentsFetched, setCommentsFetched] = useState(false);
+
+  async function getCommentsForCourses(url, body){
+    const response = await fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers:{
+        'Content-Type' : 'application/json',
+        'Access-Control-Allow-Origin' : 'http://localhost:4000'
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: body
+    })
+    return response;
+  }
+
+  useEffect(() => {
+    const getCommentsResponse = async ()=>{
+      const body = {
+        "idCurso": UserProvider.user.courses,
+      } 
+      try {
+        getCommentsForCourses('localhost:4000/api/comments/commentsForCourse', body)
+        .then(response =>{
+          if(response.ok){
+            console.log("Respuesta Exitosa")
+          }
+          else{
+            console.log(response)
+          }
+          console.log(courses)
+          return response.json()
+        })
+        .then(data =>{
+          setComments(data.data.docs)
+        })
+      } catch (error) {
+        console.log(error)
+      }
+      if(!commentsFetched){
+        getCommentsResponse()
+      }
     }
+  }, [commentsFetched])
 
-    setOpenSuccess(false);
-  };
-
-  const handleCloseError = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
-    setOpenError(false);
-  };
   return (
     <div>
-      {foo}
       <List sx={{ width: '100%', maxWidth: 360}}>
       <div className="chip">
         <Chip label="Curso Marketing" color="primary" />
