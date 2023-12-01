@@ -16,6 +16,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import {UserContext} from '../UserProvider/UserProvider'
 import {useContext, useEffect } from 'react';
+import {TokenContext} from '../TokenProvider/TokenProvider';
 
 export default function AlignItemsList(props) {
   const UserProvider = useContext(UserContext)
@@ -25,6 +26,15 @@ export default function AlignItemsList(props) {
   const [openError, setOpenError] = React.useState(false);
   const {usuario, comentario, categoria, estrellas} = props;
 
+=======
+export default function AlignItemsList() {
+  const TokenProvider = useContext(TokenContext)
+  const UserProvider = useContext(UserContext)
+  const [showCard, setShowCard] = useState(true)
+  const [blockCard, setBlockCard] = useState(true)
+  const [openSuccess, setOpenSuccess] = useState(false);
+  const [openError, setOpenError] = useState(false);
+>>>>>>> Stashed changes
   
   const handleAceptar = (event)=>{
     event.preventDefault();
@@ -37,6 +47,15 @@ export default function AlignItemsList(props) {
     setOpenError(true)
   }
 
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+  }
+    setOpenSuccess(false);
+    setOpenError(false);
+  };
+
   const [comments, setComments] = useState([]);
   const [commentsFetched, setCommentsFetched] = useState(false);
 
@@ -48,22 +67,23 @@ export default function AlignItemsList(props) {
       credentials: 'same-origin',
       headers:{
         'Content-Type' : 'application/json',
-        'Access-Control-Allow-Origin' : 'http://localhost:4000'
+        'Access-Control-Allow-Origin' : 'http://localhost:4000',
+        'x-access-token' : TokenProvider.token
       },
       redirect: 'follow',
       referrerPolicy: 'no-referrer',
-      body: body
+      body: JSON.stringify(body)
     })
     return response;
   }
 
   useEffect(() => {
     const getCommentsResponse = async ()=>{
-      const body = {
-        "idCurso": UserProvider.user.courses,
-      } 
+      const body = {"courses": UserProvider.user.courses,} 
+
+      
       try {
-        getCommentsForCourses('localhost:4000/api/comments/commentsForCourse', body)
+        getCommentsForCourses('http://localhost:4000/api/comments/commentsForCourse', body)
         .then(response =>{
           if(response.ok){
             console.log("Respuesta Exitosa")
@@ -71,7 +91,6 @@ export default function AlignItemsList(props) {
           else{
             console.log(response)
           }
-          console.log(courses)
           return response.json()
         })
         .then(data =>{
@@ -80,10 +99,12 @@ export default function AlignItemsList(props) {
       } catch (error) {
         console.log(error)
       }
-      if(!commentsFetched){
-        getCommentsResponse()
-      }
     }
+
+    if(!commentsFetched){
+      getCommentsResponse()
+    }
+  
   }, [commentsFetched])
 
   return (
@@ -140,13 +161,13 @@ export default function AlignItemsList(props) {
       
             
       </List>
-      <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleCloseSuccess}>
-      <Alert onClose={handleCloseSuccess} severity="success" sx={{ width: '100%' }}>
+      <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleClose}>
+      <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
         Se ha aceptado el comentario 👍
       </Alert>
       </Snackbar>
-      <Snackbar open={openError} autoHideDuration={5000} onClose={handleCloseError}>
-      <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+      <Snackbar open={openError} autoHideDuration={5000} onClose={handleClose}>
+      <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
         Se ha bloqueado el comentario 🚫
       </Alert>
       </Snackbar>
