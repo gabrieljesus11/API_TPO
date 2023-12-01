@@ -12,7 +12,10 @@ import CardActions from '@mui/material/CardActions';
 import Chip from '@mui/material/Chip';
 import './ABMcontratos.css';
 
-export default function AlignItemsList() {
+export default function AlignItemsList(props) {
+
+  const {nombre, curso, telefono, mail, comentario} = props;
+
   return (
     
 <div className='listadoCompleto'>
@@ -24,28 +27,28 @@ export default function AlignItemsList() {
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Tomás Rodriguez" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="usuario" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
         
-          primary="Tomás Rodriguez"
+          primary={nombre}
           secondary={
             <React.Fragment>
             
             <div className='textoCurso'>
-                Programación web
+                {curso}
               </div>
 
 
             <div className='moduloInfo'>
               <div className='textoContacto'>
-                +54 11 43234543
+                {telefono}
               </div>
               <div className='textoContacto'>
-                arodriguez@gmail.com
+                {mail}
               </div>
             <div className='textoContacto'>
-                “Me interesa comenzar este curso para aprender más sobre programación”
+                {comentario}
               </div>
 
               </div>
@@ -65,104 +68,6 @@ export default function AlignItemsList() {
 
                 </div>
 
-
-              
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-      </div>
-
-      
-      <div className='cardSolicitud'>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Agustina Gutierrez" src="/static/images/avatar/1.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-        
-          primary="Agustina Gutierrez"
-          secondary={
-            <React.Fragment>
-            
-            <div className='textoCurso'>
-                Negocios tecnológicos
-              </div>
-              
-              <div className='moduloInfo'>
-              <div className='textoContacto'>
-                +54 11 43234543
-              </div>
-              <div className='textoContacto'>
-                arodriguez@gmail.com
-              </div>
-            <div className='textoContacto'>
-                “Me interesa comenzar este curso para aprender más sobre programación”
-              </div>
-
-              </div>
-
-            <div className='botonesContratacion'>
-
-              <div className="botonAceptada">
-                  <Link to={"/"} className="linkAceptada">Aceptar solicitud</Link>
-                </div>
-
-                <div className="botonCancelada">
-                  <Link to={"/"} className="linkCancelada">Cancelar solicitud</Link>
-                </div>
-
-                </div>
-
-              
-            </React.Fragment>
-          }
-        />
-      </ListItem>
-</div>
-
-
-
-      <div className='cardSolicitud'>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Camila Fernandez" src="/static/images/avatar/1.jpg" />
-        </ListItemAvatar>
-        <ListItemText
-        
-          primary="Camila Fernandez"
-          secondary={
-            <React.Fragment>
-        
-
-              <div className='textoCurso'>
-                Marketing digital
-              </div>
-
-              <div className='moduloInfo'>
-              <div className='textoContacto'>
-                +54 11 43234543
-              </div>
-              <div className='textoContacto'>
-                arodriguez@gmail.com
-              </div>
-            <div className='textoContacto'>
-                “Me interesa comenzar este curso para aprender más sobre programación”
-              </div>
-
-              </div>
-
-            <div className='botonesContratacion'>
-
-              <div className="botonAceptada">
-                  <Link to={"/"} className="linkAceptada">Aceptar solicitud</Link>
-                </div>
-
-                <div className="botonCancelada">
-                  <Link to={"/"} className="linkCancelada">Cancelar solicitud</Link>
-                </div>
-
-                </div>
 
               
             </React.Fragment>
@@ -185,26 +90,26 @@ export default function AlignItemsList() {
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Esteban Lopez" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="usuario" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
         
-          primary="Esteban Lopez"
+          primary={nombre}
           secondary={
             <React.Fragment>
             
             <div className='textoCurso'>
-                Diseño UX
+                {curso}
               </div>
               <div className='moduloInfo'>
               <div className='textoContacto'>
-                +54 11 43234543
+                {telefono}
               </div>
               <div className='textoContacto'>
-                arodriguez@gmail.com
+               {mail}
               </div>
             <div className='textoContacto'>
-                “Me interesa comenzar este curso para aprender más sobre programación”
+                {comentario}
               </div>
 
               </div>
@@ -242,27 +147,27 @@ export default function AlignItemsList() {
   <div className='cardSolicitud'>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Romina Rodriguez" src="/static/images/avatar/1.jpg" />
+          <Avatar alt="usuario" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
 
         <ListItemText
         
-          primary="Romina Rodriguez"
+          primary={nombre}
           secondary={
             <React.Fragment>
             
             <div className='textoCurso'>
-                Marketing digital
+                {curso}
               </div>
               <div className='moduloInfo'>
               <div className='textoContacto'>
-                +54 11 43234543
+                {telefono}
               </div>
               <div className='textoContacto'>
-                arodriguez@gmail.com
+                {mail}
               </div>
             <div className='textoContacto'>
-                “Me interesa comenzar este curso para aprender más sobre programación”
+                {comentario}
               </div>
 
               </div>
@@ -280,12 +185,6 @@ export default function AlignItemsList() {
       </div>
 
       </div>
-
-
-
-
-
-
 
 
 
