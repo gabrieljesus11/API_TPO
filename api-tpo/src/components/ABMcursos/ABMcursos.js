@@ -19,18 +19,18 @@ import Switch from '@mui/material/Switch';
 
 
 const data = [
-    {id: 1, curso: 'Marketing', duracion: 25, frecuencia: 3, precio: 40000},
-    {id: 2, curso: 'Diseño UX', duracion: 30, frecuencia: 2, precio: 50000},
-    {id: 3, curso: 'Cerámica', duracion: 15, frecuencia: 3, precio: 10000},
-    {id: 4, curso: 'Yoga', duracion: 4, frecuencia: 24, precio: 20000},
-    {id: 5, curso: 'Zumba', duracion: 6, frecuencia: 2, precio: 20000},
-    {id: 6, curso: 'Programación', duracion: 45, frecuencia: 4, precio: 80000},
+    {id: 1, curso: 'Marketing', duracion: "25 horas", frecuencia: "3 veces por semana", precio: 40000, moneda: "ARS"},
+    {id: 2, curso: 'Diseño UX', duracion: "30 horas", frecuencia: "2 días al mes", precio: 50000, moneda: "ARS"},
+    {id: 3, curso: 'Cerámica', duracion: "15 horas", frecuencia: "3 horas diarias", precio: 10000, moneda: "ARS"},
+    {id: 4, curso: 'Yoga', duracion: "4 horas por clase", frecuencia: "Cada 24 días", precio: 20000, moneda: "ARS"},
+    {id: 5, curso: 'Zumba', duracion: "1 hora por clase", frecuencia: "2 veces a la semana", precio: 20000, moneda: "ARS"},
+    {id: 6, curso: 'Programación', duracion: "45 horas", frecuencia: "4 veces a la semana", precio: 80000, moneda: "ARS"}
     
   ];
 
 
 class ABMcursos extends React.Component{
-
+  
     state = {
         data: data,
         modalActualizar: false,
@@ -79,7 +79,7 @@ class ABMcursos extends React.Component{
       };
     
       eliminar = (elemento) => {
-        var opcion = window.confirm("Estás Seguro que deseas Eliminar el elemento "+elemento.id);
+        var opcion = window.confirm("Estás seguro que deseas eliminar el curso "+elemento.curso + "?");
         if (opcion === true) {
           var contador = 0;
           var arreglo = this.state.data;
@@ -120,25 +120,25 @@ class ABMcursos extends React.Component{
             <br />
 
             <Table responsive striped bordered hover>
-            <thread>
+           
                 <tr>
-                    <th>id</th>
                     <th>Curso</th>
-                    <th>Duración (hs)</th>
-                    <th>Frecuencia (días)</th>
-                    <th>Precio ($)</th>
+                    <th>Duración</th>
+                    <th>Frecuencia</th>
+                    <th>Moneda</th>
+                    <th>Precio</th>
                     <th>Modificar</th>
                     <th>Publicar</th>
                     <th>Eliminar</th>
                 </tr>
-            </thread>
+            
             <tbody>
                 {this.state.data.map((elemento)=>(
                     <tr>
-                        <td>{elemento.id}</td>
                         <td>{elemento.curso}</td>
                         <td>{elemento.duracion}</td>
                         <td>{elemento.frecuencia}</td>
+                        <td>{elemento.moneda}</td>
                         <td>{elemento.precio}</td>
                         <td><Button color="primary" onClick={() => this.mostrarModalActualizar(elemento)}>Modificar</Button></td>
                         <td> <FormControlLabel control={<Switch defaultChecked />} label="Publicar"/></td>

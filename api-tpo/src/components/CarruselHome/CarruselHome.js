@@ -65,11 +65,13 @@ function Carrusel() {
       {courses.map((card, index) => (
         <CardHome
           key={index}
+          actualId={card._id}
           titulo={card.titulo}
-          fecha={card.fecha}
+          fecha={card.fechaInicio.split('T')[0]}
           duracion={card.duracion}
           responsable={card.responsable}
           precio={card.precio}
+          moneda={card.moneda}
         />
       ))}
     </div>

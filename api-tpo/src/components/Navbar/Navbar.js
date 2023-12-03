@@ -52,7 +52,7 @@ export default function NavBar(){
           <Toolbar style = {{justifyContent: 'space-between'}}>
             <div className='menu-and-logo' >
               <TemporaryDrawer className='top-element'/>
-              <img src={logo} alt= 'Education Hub Logo' className='top-element'/>
+              <a href='./'><img  src={logo} alt= 'Education Hub Logo' className='top-element'/></a>
             </div>
           
             

@@ -25,21 +25,7 @@ export default function Contratar(){
         </div>
     
         <div className="contacto-element">
-
-    
-        {contract.map((contrato, index) => (
-        <FormContratar
-          key={index}
-          nombre={contrato.nombre}
-          curso={contrato.curso}
-          teléfono={contrato.teléfono}
-          mail={contrato.mail}
-          comentario={contrato.comentario}
-        />
-      ))}
-    
-
-            <FormContratar />
+        <FormContratar/>
         </div>
     </section>
     

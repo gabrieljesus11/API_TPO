@@ -9,7 +9,10 @@ import './CardHome.css';
 
 function CardHome(props) {
 
-  const {titulo, fecha, duracion, responsable, precio} = props;
+  const {titulo, fecha, duracion, responsable, precio, moneda, actualId} = props;
+  const handleContratar = ()=>{
+    localStorage.setItem('idCursoActivo', actualId)
+  }
 
   return (
     <div className='cardHome'>
@@ -41,7 +44,7 @@ function CardHome(props) {
         </div>
 
         <div className="precioCardHome">
-        $ {precio}
+        {moneda}{precio}
         </div>
 
         </div>
@@ -54,7 +57,7 @@ function CardHome(props) {
       </div>
 
       <div className="botonPrimario">
-        <Link to={"/contratar"} className="linkPrimario" underline="none">Contratar</Link>
+        <Link to={"/contratar"} className="linkPrimario" underline="none" onClick={handleContratar}>Contratar</Link>
       </div>
         
       </div>

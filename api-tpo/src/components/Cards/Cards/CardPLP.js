@@ -9,7 +9,14 @@ import './CardPLP.css';
 
 export default function CardPLP(props) {
 
-  const {titulo, fecha, duracion, responsable, precio} = props;
+  const {titulo, fecha, duracion, responsable, precio, moneda, id} = props;
+  var actualId = JSON.stringify(id);
+
+  const handleContratar = ()=>{
+    localStorage.setItem('idCursoActivo', actualId)
+  }
+
+  
 
   return (
     <div className='cardPLP'>
@@ -41,7 +48,7 @@ export default function CardPLP(props) {
         </div>
 
         <div className="precioCard">
-          $ {precio}
+          {moneda} {precio}
         </div>
 
         </div>
@@ -54,7 +61,7 @@ export default function CardPLP(props) {
       </div>
 
       <div className="botonPrimario">
-        <Link to={"/contratar"} className="linkPrimario" underline="none">Contratar</Link>
+        <Link to={"/contratar"} className="linkPrimario" underline="none" onClick={handleContratar}>Contratar</Link>
       </div>
         
       </div>

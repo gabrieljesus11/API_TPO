@@ -210,10 +210,12 @@ export default function CursosDisponibles(){
         <CardPLP
           key={index}
           titulo={card.titulo}
-          fecha={card.fecha}
+          fecha={card.fechaInicio.split('T')[0]}
           duracion={card.duracion}
           responsable={card.responsable}
           precio={card.precio}
+          moneda={card.moneda}
+          id={card._id}
         />
       ))}
     

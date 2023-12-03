@@ -27,7 +27,7 @@ export default function Comentarios(){
         {comments.map((comment, index) => (
         <ABMcomentarios
           key={index}
-          usuario={comment.titulo}
+          usuario={comment.usuario}
           comentario={comment.comentario}
           categoria={comment.categoria}
           estrellas={comment.estrellas}

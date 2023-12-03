@@ -148,7 +148,7 @@ const renderForm = (
 
     <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Se inició sesión correctamente
+          Se inició sesión correctamente. Redireccionando a Home
         </Alert>
     </Snackbar>
     <Snackbar open={openError} autoHideDuration={5000} onClose={handleClose}>

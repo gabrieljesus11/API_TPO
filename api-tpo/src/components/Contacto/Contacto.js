@@ -9,6 +9,7 @@ import { useState} from 'react';
 import './Contacto.css';
 import Alert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
+import { useNavigate } from "react-router-dom";
 
 export default function FormPropsTextFields() {
   
@@ -20,6 +21,7 @@ export default function FormPropsTextFields() {
   const [openSuccess, setOpenSuccess] = useState(false);
   const [openError, setOpenError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate()
   
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -56,13 +58,17 @@ export default function FormPropsTextFields() {
       "comentario": comentario
     }
 
-    console.log(body)
+    const handleRedirection = async () =>{
+      await new Promise( resolve => setTimeout(resolve, 1000));
+      navigate('/')
+    }
     
     const emailResponse = sendEmail('http://localhost:4000/api/contact/createContact', body)
     .then(response => {
       console.log(body)
       if(response.ok){
         setOpenSuccess(true)
+        handleRedirection()
       }
       else{
         console.log(response)
@@ -156,7 +162,7 @@ export default function FormPropsTextFields() {
 
     <Snackbar open={openSuccess} autoHideDuration={5000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Se editó el usuario correctamente
+          Se envió el mensaje correctamente
         </Alert>
     </Snackbar>
     <Snackbar open={openError} autoHideDuration={5000} onClose={handleClose}>

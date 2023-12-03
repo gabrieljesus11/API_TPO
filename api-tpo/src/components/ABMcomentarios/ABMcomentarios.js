@@ -19,22 +19,13 @@ import {useContext, useEffect } from 'react';
 import {TokenContext} from '../TokenProvider/TokenProvider';
 
 export default function AlignItemsList(props) {
+  const TokenProvider = useContext(TokenContext)
   const UserProvider = useContext(UserContext)
   const [showCard, setShowCard] = useState(true)
   const [blockCard, setBlockCard] = useState(true)
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
   const {usuario, comentario, categoria, estrellas} = props;
-
-=======
-export default function AlignItemsList() {
-  const TokenProvider = useContext(TokenContext)
-  const UserProvider = useContext(UserContext)
-  const [showCard, setShowCard] = useState(true)
-  const [blockCard, setBlockCard] = useState(true)
-  const [openSuccess, setOpenSuccess] = useState(false);
-  const [openError, setOpenError] = useState(false);
->>>>>>> Stashed changes
   
   const handleAceptar = (event)=>{
     event.preventDefault();
