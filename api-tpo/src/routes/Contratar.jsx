@@ -16,7 +16,15 @@ export default function Contratar(){
 
     return <div>
     <NavBar />
-    <div className="landing" style={{backgroundImage:`url(${fondo})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" }}>
+    <div className="landing" 
+    style={{backgroundImage:`url(${fondo})`,
+      backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        width: '100vw',
+        height: '100vh'
+        
+        }}>
 
 
     <section id="contacto-container">
