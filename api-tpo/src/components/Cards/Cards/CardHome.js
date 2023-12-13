@@ -15,7 +15,7 @@ function CardHome(props) {
     <div className='cardHome'>
       <Card>
 
-      <div className="card">
+      <div className="cardContenedor">
         
         <div className="tituloCardHome">
           {titulo}

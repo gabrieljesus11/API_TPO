@@ -15,7 +15,7 @@ export default function CardPLP(props) {
     <div className='cardPLP'>
       <Card>
 
-      <div className="card">
+      <div className="cardContenedorPLP">
         
         <div className="tituloCard">
           {titulo}
